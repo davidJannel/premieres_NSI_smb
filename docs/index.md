@@ -1,26 +1,20 @@
-# Terminal et IDE dans Mkdocs
+# Spécialité NSI
+# Lycée Ste Marie - Beaucamps Ligny
 
-## Introduction
+![Image](xtra/logo.png){: .center width=50%}
 
-`Pyodide-Mkdocs` est une solution technique permettant de créer un cours interactif à partir d'un site généré par Mkdocs. 
+## Supports utilisés :
+### Documents, activités, mini-projets, TP, évaluations :
+[Moodle](https://ent.stemariebeaucamps.org/course/view.php?id=251)
 
-Il permet d'intégrer, dans le navigateur, côté client :
+## Cahier d'activité Bordas :
+[Ressources en ligne du cahier](https://lycee.editions-bordas.fr/cahier-NSI1re)
 
-- une console Python ;
-- un éditeur de code ;
-- un juge en ligne associé à des corrigés.
+## [Programme officiel](xtra/programme.pdf)
 
-Garantie :
+## Progression pour cette année :
 
-- [x] sans cookie
-- [x] sans inscription
-- [x] créé par un enseignant pour les enseignants
+ - [CH1 : Constituants et périphériques d'une machine](Architecture/Von Neumann partie 1/cours.md)
 
-??? info "Solution"
-    La technologie permettant ce tour de force s'appelle [Pyodide](https://pyodide.org/en/stable/ "Pyodide, Python with the scientific stack, compiled to WebAssembly").
-    
-    Pyodide utilise WebAssembly pour faire le lien entre Python et Javascript et proposer un environnement permettant de manipuler le DOM avec Python, ou de manipuler Python avec Javascript.
+## Références et sites utilisés:
 
-## Aperçu
-
-{{terminal()}}

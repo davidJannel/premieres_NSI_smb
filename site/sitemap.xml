@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
-         <lastmod>2022-08-22</lastmod>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/</loc>
+         <lastmod>2022-08-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-08-22</lastmod>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/sommaire/</loc>
+         <lastmod>2022-08-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-08-22</lastmod>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/IHM/cours/</loc>
+         <lastmod>2022-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/OS/cours/</loc>
+         <lastmod>2022-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/Von%20Neumann%20partie%201/cours/</loc>
+         <lastmod>2022-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/Von%20Neumann%20partie%202/cours/</loc>
+         <lastmod>2022-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20bases/Booleens/cours/</loc>
+         <lastmod>2022-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/xtra/end_REM/</loc>
+         <lastmod>2022-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/xtra/start_REM/</loc>
+         <lastmod>2022-08-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

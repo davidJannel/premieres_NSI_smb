@@ -1,5 +1,5 @@
 site_name: "Premières NSI - Lycée Ste Marie"
-#site_url: https://bouillotvincent.gitlab.io/pyodide-mkdocs
+site_url: https://davidjannel.github.io/premieres_NSI_smb/
 repo_url: https://github.com/davidJannel/premieres_NSI_smb
 edit_uri: tree/main/docs/
 site_description: Cours premières spécialité NSI
@@ -10,32 +10,36 @@ theme:
     custom_dir: my_theme_customizations/
     font: false                     # RGPD ; pas de fonte Google
     language: fr                    # français
-    palette:                        # Palettes de couleurs jour/nuit
-      - media: "(prefers-color-scheme: light)"
-        scheme: slate
-        primary: blue
-        accent: blue
-        toggle:
-            icon: material/weather-night
-            name: Passer au mode jour
-      - media: "(prefers-color-scheme: dark)"
-        scheme: default
-        primary: indigo
-        accent: indigo
-        toggle:
-            icon: material/weather-sunny
-            name: Passer au mode nuit
+    favicon: xtra/logo.png
+    logo: xtra/logo.png
+    palette:
+        # Light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: blue grey
+          accent: indigo
+          toggle:
+            icon: material/toggle-switch-off-outline
+            name: Mode sombre
+
+        # Dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: blue grey
+          accent: indigo
+          toggle:
+            icon: material/toggle-switch
+            name: Mode clair
     features:
         - navigation.instant
         - navigation.tabs
-        - navigation.tabs.sticky
-        - navigation.sections
-        # - navigation.expand
-        - navigation.tracking
+        # - navigation.tabs.sticky
+        # - navigation.sections
+        - navigation.expand
+        # - navigation.tracking
         - navigation.top
-        # - toc.integrate
-        # - header.autohide
-
+        - toc.integrate
+        - header.autohide
 
 markdown_extensions:
     - meta
@@ -84,10 +88,15 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - xtra/javascripts/interpreter.js
+  - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/massilia-maths.js
 # - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
 # - javascripts/mermaid.js
 
 extra_css:
+  - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/massilia-maths.css
+  - stylesheets/extra.css
   - xtra/stylesheets/pyoditeur.css
   - xtra/stylesheets/qcm.css
   - xtra/stylesheets/ajustements.css                      # ajustements
+
+copyright: CC BY-SA / D. Jannel
