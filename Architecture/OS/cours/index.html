@@ -17,7 +17,7 @@
     
     
       
-        <title>Cours - Premières NSI - Lycée Ste Marie</title>
+        <title>CH3 : Systèmes d'exploitation - Premières NSI - Lycée Ste Marie</title>
       
     
     
@@ -94,6 +94,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ch3-systemes-dexploitation" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -122,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cours
+              CH3 : Systèmes d'exploitation
             
           </span>
         </div>
@@ -473,10 +478,145 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CH3 : Systèmes d'exploitation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Cours
+        CH3 : Systèmes d'exploitation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-quest-ce-quun-systeme-dexploitation" class="md-nav__link">
+    1. Qu'est ce qu'un système d'exploitation ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-systeme-de-fichier-de-linux" class="md-nav__link">
+    2. Système de fichier de Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Système de fichier de Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arborescence" class="md-nav__link">
+    2.1 Arborescence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-chemin-dun-fichier" class="md-nav__link">
+    2.2 Chemin d'un fichier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interface-utilisateur-dun-systeme-dexploitation" class="md-nav__link">
+    3. Interface utilisateur d’un système d’exploitation
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Interface utilisateur d’un système d’exploitation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-le-shell" class="md-nav__link">
+    3.1 Le shell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-invite-de-commande-et-commandes" class="md-nav__link">
+    3.2 Invite de commande et commandes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-commandes-de-base-linux" class="md-nav__link">
+    3.3 Commandes de base Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-droits-et-permissions" class="md-nav__link">
+    4. Droits et permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Droits et permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-utilisateurs-et-groupes-sous-linux" class="md-nav__link">
+    4.1 Utilisateurs et groupes sous Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-droits-des-repertoires-et-fichiers" class="md-nav__link">
+    4.2 Droits des répertoires et fichiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-gerer-les-droits" class="md-nav__link">
+    4.3 Gérer les droits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-notation-octale" class="md-nav__link">
+    4.4 Notation octale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -752,9 +892,192 @@
 
 
 
-  <h1>Cours</h1>
+<h1 id="ch3-systemes-dexploitation">CH3 : Systèmes d'exploitation<a class="headerlink" href="#ch3-systemes-dexploitation" title="Permanent link">⚓︎</a></h1>
+<details class="note">
+<summary>Programme officiel</summary>
+<p><img alt="Image" src="../img/bo.png" /></p>
+</details>
+<h2 id="1-quest-ce-quun-systeme-dexploitation">1. Qu'est ce qu'un système d'exploitation ?<a class="headerlink" href="#1-quest-ce-quun-systeme-dexploitation" title="Permanent link">⚓︎</a></h2>
+<p>Un <strong>système d’exploitation</strong> (<strong>OS</strong> pour "opérating system" <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />) est un logiciel, ou ensemble de programmes, qui sert d’interface entre les programmes exécutés par l’utilisateur et les ressources matérielles d’un ordinateur.</p>
+<p><img alt="Image" class="center" src="../img/OS_couches.png" /></p>
+<p>Il est à la fois :</p>
+<ul>
+<li>une machine virtuelle qui présente une interface simplifiée d’accès aux ressources (processeur, mémoire, périphériques d’entrée/sortie, réseau …) pour les autres programmes et pour l’utilisateur</li>
+<li>un chef d’orchestre et un administrateur :<ul>
+<li>c’est le premier programme exécuté au démarrage de l’ordinateur</li>
+<li>il gère l’accès concurrent aux ressources par les différents programmes (ordonnancement de l’utilisation du processeur par les programmes en cours d’exécution ou processus, sécurisation de la mémoire) ou utilisateurs (droits d’accès du système de fichiers).</li>
+</ul>
+</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SpCP2oaCx8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+<div class="admonition note">
+<p class="admonition-title">À retenir</p>
+<p>Le <strong>système d'exploitation</strong> est l'ensemble des programmes qui permet aux autres programmes d'interagir avec les ressources matérielles 
+(processeur, mémoire, périphériques d'entrée / sortie) sur un ordinateur. Il sert donc d'intermédiaire entre le matériel et le logiciel et assure la coordination, 
+la sécurité et la stabilité d'un environnement partagés par plusieurs programmes et plusieurs utilisateurs.</p>
+<p>Les deux familles de systèmes d'exploitation les plus populaires sont <strong>Unix</strong> (dont <strong>macOS</strong>, <strong>GNU/Linux</strong>, <strong>iOS</strong> et <strong>Android</strong>) et <strong>Windows</strong>.</p>
+<ul>
+<li>Windows est principalement utilisé sur les PC de bureau, c'est un système d'exploitation <strong>propriétaire</strong> tout comme MacOS.</li>
+<li>Linux au contraire est un système d'exploitation <strong>libre</strong>, il est principalement utilisé dans les serveurs, téléphones portables via Android et les supercalculateurs.</li>
+</ul>
+</div>
+<p>Comme nous avons au lycée un système d'exploitation Windows et que le programme officiel demande de travailler sous Linux, vous pouvez passer les commandes de ce chapitre directement dans le navigateur grâce à l'émulateur de système mis au point par Fabrice Bellard accessible à l'adresse :</p>
+<p><a href="https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&amp;mem=192">https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&amp;mem=192</a></p>
+<h2 id="2-systeme-de-fichier-de-linux">2. Système de fichier de Linux<a class="headerlink" href="#2-systeme-de-fichier-de-linux" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-arborescence">2.1 Arborescence<a class="headerlink" href="#21-arborescence" title="Permanent link">⚓︎</a></h3>
+<p>Avec Linux , comme dans Windows, les données sont stockées dans des <strong>fichiers</strong> (<strong>file</strong> :gb), eux-mêmes contenus dans des dossiers appellés <strong>répertoires</strong> (<strong>directory</strong> <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />).</p>
+<p>Contrairement à Windows, sous Linux, la notion de "disque" n'existe pas. L'organisation des répertoires et fichiers est appellée <strong>arborescence</strong>.</p>
+<p><img alt="Image" class="center" src="../img/arborescence_1.png" /></p>
+<p>Sous Linux, tout est fichier. Ils sont organisés suivant une unique arborescence dont la <strong>racine</strong> est nommée <strong>/</strong>.</p>
+<p>Les répertoires nécessaires au fonctionnement du sytème d'exploitation sont <code>etc, dev, tmp ...</code>. Les répertoires des utilisateurs sont situés dans le répertoire <code>home</code> </p>
+<h3 id="22-chemin-dun-fichier">2.2 Chemin d'un fichier<a class="headerlink" href="#22-chemin-dun-fichier" title="Permanent link">⚓︎</a></h3>
+<p>Pour localiser un fichier dans cette arborescence on doit définir le <strong>chemin</strong> d'accès au fichier.</p>
+<h4 id="a-chemin-absolu">a. Chemin absolu<a class="headerlink" href="#a-chemin-absolu" title="Permanent link">⚓︎</a></h4>
+<div class="admonition savoir">
+<p class="admonition-title">À savoir</p>
+<p>Le <strong>chemin absolu</strong> d'un fichier est part toujours du répertoire <strong>racine : /</strong> suivi du ou des nom(s) de répertoire(s) jusqu'à la destination, séparé par des symboles <strong>/</strong>.</p>
+</div>
+<p>Exemple : Dans l'arborescence ci-dessous, le chemin absolu du fichier <code>fibonacci.py</code> est <code>/home/frederic/programmes/fibonacci.py</code></p>
+<p><img alt="Image" src="../img/arborescence.png" /></p>
+<p>Attention Linux est sensible à la <strong>casse</strong> : majuscules, minuscules, espaces ...</p>
+<h4 id="b-chemin-relatif">b. Chemin relatif<a class="headerlink" href="#b-chemin-relatif" title="Permanent link">⚓︎</a></h4>
+<div class="admonition savoir">
+<p class="admonition-title">À savoir</p>
+<p>Lorsqu'on se déplace dans le système de fichier, le répertoire dans lequel on se trouve s'appelle le <strong>répertoire courant</strong>. Un <strong>chemin relatif</strong> part du répertoire courant et donne la liste des noms du ou des répertoire(s) jusqu'à la destination, séparés par des <strong>/</strong>.</p>
+<p>Dans un <strong>chemin relatif</strong> <strong><code>.</code></strong> signifie <strong>répertoire (ou nœud) courant</strong>, <strong><code>..</code></strong> signifie <strong>répetoire (ou nœud) parent</strong>, <strong><code>~</code></strong> signifie <strong>répertoire personnel</strong>.</p>
+</div>
+<p>Exemples : Dans l'arborescence précédente, si on est dans son répertoire personnel <code>frederic</code>, le chemin relatif du fichier <code>fibonacci.py</code> est <code>./fibonacci.py</code>. Par contre, si on se situe dans le répertoire <code>images</code>, le chemin relatif du fichier <code>fibonacci.py</code> est <code>../programmes/fibonacci.py</code>.</p>
+<h2 id="3-interface-utilisateur-dun-systeme-dexploitation">3. Interface utilisateur d’un système d’exploitation<a class="headerlink" href="#3-interface-utilisateur-dun-systeme-dexploitation" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-le-shell">3.1 Le shell<a class="headerlink" href="#31-le-shell" title="Permanent link">⚓︎</a></h3>
+<p>Une interface entre l’utilisateur et le système d’exploitation s’appelle un <strong>shell</strong> ou <strong>interpréteur de commandes</strong>.</p>
+<p>Le rôle d’un shell est de prendre une entrée de l’utilisateur, de la traduire en instructions compréhensibles par le système d’exploitation et de renvoyer la réponse du système à l’utilisateur.</p>
+<p>Il existe deux grandes catégories de shell :</p>
+<ul>
+<li>les <strong>interfaces textuelles</strong> comme <strong>bash</strong>, le plus commun sur les systèmes de la famille UNIX.</li>
+<li>les <strong>interfaces graphiques</strong> qu’on retrouve dans les systèmes d’exploitation grand public tels que Windows</li>
+</ul>
+<h3 id="32-invite-de-commande-et-commandes">3.2 Invite de commande et commandes<a class="headerlink" href="#32-invite-de-commande-et-commandes" title="Permanent link">⚓︎</a></h3>
+<p>On appelle <strong>Invite de commande</strong> le message qui « invite » à entrer une commande dans la console/terminal.</p>
+<p>Exemple :</p>
+<p><div class="highlight"><pre><span></span><code>toto@pc12_lycee:~$
+</code></pre></div>
+<code>toto@pc_lycee</code> désigne le nom de l'<strong>utilisateur</strong> <code>toto</code> sur la <strong>machine</strong> nommée <code>pc12_lycee</code>. Le signe <code>~</code> signifie que l'on se trouve dans le <strong>répertoire personnel de l'utilisateur</strong> <code>toto</code>.</p>
+<p>Le symbole dollar <strong>$</strong> final signifie que l’utilisateur <code>toto</code> n’est <strong>pas l’administrateur de la machine</strong>. Lorsqu’on utilise la machine en tant qu’<strong>administrateur</strong>, appelé <strong><code>root</code></strong> sous UniX, le symbole terminal est <strong>#</strong>.</p>
+<p>La syntaxe d'une ligne commande est : <strong><code>nom de la commande</code></strong> suivi <mark>éventuellement</mark> d'<strong>-options</strong> et d'<strong>arguments</strong>.</p>
+<p>Exemple : </p>
+<div class="highlight"><pre><span></span><code>toto@pc12_lycee:~$ rm -r ./Documents/Dossier_secret
+</code></pre></div>
+<p>La commande est <code>rm</code>. On a une option <code>-r</code> et un argument <code>./Documents/Dossier_secret</code>. Cela signifie que l'on veut supprimer le répertoire <code>Dossier_secret</code> et tout ce qu'il contient.</p>
+<h3 id="33-commandes-de-base-linux">3.3 Commandes de base Linux<a class="headerlink" href="#33-commandes-de-base-linux" title="Permanent link">⚓︎</a></h3>
+<p>On prendra pour exemple l'arborescence de fichier ci-dessous pour illustrer nos exemples. On est l'utilisateur <code>sophie</code>.</p>
+<p><img alt="Image" class="center" src="../img/arborescence_2.png" /></p>
+<h4 id="a-naviger-dans-le-systeme-de-fichiers">a. Naviger dans le système de fichiers<a class="headerlink" href="#a-naviger-dans-le-systeme-de-fichiers" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><strong><mark>pwd</mark></strong> (print working directory) : Affiche le nom du répertoire courant.</li>
+<li><strong><mark>ls</mark></strong> (list) : Permet d'afficher le contenu d'un répertoire.</li>
+<li><strong><mark>cd</mark> destination</strong> (change directory) : permet de changer de répertoire courant.</li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code>sophie@ma_machine:~$ <span class="nb">pwd</span>
+/home/sophie
+sophie@ma_machine:~$ ls
+images
+sophie@ma_machine:~$ <span class="nb">cd</span> ./images
+sophie@ma_machine:images$ ls
+noel2018 photo2.jpg
+</code></pre></div>
+<h4 id="b-creer-des-repertoires">b. Créer des répertoires<a class="headerlink" href="#b-creer-des-repertoires" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><strong><mark>mkdir</mark> nom_repertoire</strong> (make directory) : crée un répertoire <code>nom_repertoire</code>.</li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code>sophie@ma_machine:images$ mkdir vacances2022
+sophie@ma_machine:images$ ls
+noel2018 vacances2022 photo2.jpg
+</code></pre></div>
+<h4 id="c-deplacer-copier-des-fichiers">c. Déplacer / Copier des fichiers<a class="headerlink" href="#c-deplacer-copier-des-fichiers" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><strong><mark>mv</mark> source destination</strong> (move) : déplace ou renomme le fichier ou repertoire <code>source</code> en <code>destination</code>.</li>
+<li><strong><mark>cp</mark> source destination</strong> (copy) : copie le fichier ou répertoire <code>source</code> vers la <code>destination</code>.</li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code>sophie@ma_machine:images$ mv photo2.jpg ./vacances2022/montagne.jpg
+sophie@ma_machine:images$ ls
+noel2018 vacances2022
+sophie@ma_machine:images$ <span class="nb">cd</span> ./vacances2022
+sophie@ma_machine:vacances2022$ ls
+montagne.jpg
+sophie@ma_machine:vacances2022$ cp ../noel2018/photo1.jpg ./
+sophie@ma_machine:vacances2022$ ls
+montagne.jpg photo1.jpg
+</code></pre></div>
+<h4 id="d-supprimer-des-fichiers-et-des-repertoires">d. Supprimer des fichiers et des répertoires<a class="headerlink" href="#d-supprimer-des-fichiers-et-des-repertoires" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><strong><mark>rm</mark> chemin/nom_fichier</strong> (remove) : supprime le fichier <code>nom_fichier</code>.</li>
+<li><strong><mark>rm</mark> -r chemin/nom_repertoire</strong> : supprime le répertoire <code>nom_repertoire</code> et tout ce qu'il contient.</li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code>sophie@ma_machine:vacances2022$ rm -r ../noel2018
+sophie@ma_machine:vacances2022$ <span class="nb">cd</span> ..
+sophie@ma_machine:image$ <span class="nb">cd</span> ./noel2018
+bash: cd: ./noel2018 No such file or directory
+</code></pre></div>
+<h4 id="e-dautres-commandes-utiles">e. D'autres commandes utiles<a class="headerlink" href="#e-dautres-commandes-utiles" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><strong><mark>man</mark> nom_commande</strong> (manual) : accés à la documentation de la commande <code>nom_commande</code>.</li>
+<li><strong><mark>clear</mark></strong> (clear) : efface le contenu du terminal.</li>
+<li><strong><mark>history</mark></strong> (history) : affiche l'historique des commandes passées.</li>
+</ul>
+<h2 id="4-droits-et-permissions">4. Droits et permissions<a class="headerlink" href="#4-droits-et-permissions" title="Permanent link">⚓︎</a></h2>
+<h3 id="41-utilisateurs-et-groupes-sous-linux">4.1 Utilisateurs et groupes sous Linux<a class="headerlink" href="#41-utilisateurs-et-groupes-sous-linux" title="Permanent link">⚓︎</a></h3>
+<p>Un système Linux peut être utilisé par plusieurs utilisateurs. Un utilisateur est identifié sur une machine par un <strong>identifiant</strong> (<strong>user id</strong> <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />) et possède un espace de travail personnel avec un répertoire courant.</p>
+<p>Tous les utilisateurs n'ont pas forcément les mêmes <strong>droits d'accès</strong> et les mêmes <strong>permissions d'accès</strong> aux fichiers et répertoires de la machine. Les droits et permissions sont gérés par le système d'exploitation.</p>
+<ul>
+<li>L'<strong>administrateur</strong> ou Le <strong>super utilisateur</strong> (super user <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />) appellé <strong><mark>root</mark></strong> a accès à tous les fichiers et répertoires du système. Il a tous les droits. La commande <strong>sudo</strong> (Super-User DO) permet d'exécuter une <strong>commande en mode root</strong> dans un Terminal. Pour que la commande puisse être passée, il faut alors taper le mot de passe administrateur.</li>
+<li>Le <strong>propriétaire</strong> d'un fichier est l'utilisateur qui l'a créé. Le propriétaire d'un fichier ou d'un répertoire peut modifier les droits. Le super utilisateur peut également le faire et il peut même changer le propriétaire.</li>
+<li>Chaque utilisateur appartient à un ou plusieurs <strong>groupes</strong>. Ces groupes permettent de rassembler les utilisateurs qui ont les même droits.</li>
+</ul>
+<h3 id="42-droits-des-repertoires-et-fichiers">4.2 Droits des répertoires et fichiers<a class="headerlink" href="#42-droits-des-repertoires-et-fichiers" title="Permanent link">⚓︎</a></h3>
+<p>Chaque fichier et chaque répertoire possède une <strong>liste de droits</strong> : c’est une liste qui indique qui a le droit de <strong>lire le fichier</strong> (<strong>read</strong> <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />), de le <strong>modifier</strong> (<strong>write</strong> <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />) et de l’<strong>exécuter</strong> (<strong>execute</strong> <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />) ; on y a accès à l’aide de la commande <strong>ls -l</strong>.</p>
+<p><img alt="Image" class="center" src="../img/droits_ex.png" /></p>
+<h3 id="43-gerer-les-droits">4.3 Gérer les droits<a class="headerlink" href="#43-gerer-les-droits" title="Permanent link">⚓︎</a></h3>
+<p>Un utilisateur a le droit de faire un <strong>chmod</strong> (change mode <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />) sur un fichier ou un répertoire afin de modifier les droits :</p>
+<ul>
+<li>s'il est <strong>root</strong> ;</li>
+<li>ou s'il est le <strong>propriétaire</strong> du fichier ou du répertoire en question.</li>
+</ul>
+<p>Les <strong>options</strong> passées à la commande <strong>chmod</strong> sont indiquées comme ceci :</p>
+<p><mark><code>chmod options modes fichiers</code></mark></p>
+<ul>
+<li>Pour un fichier : <code>chmod [u g o a] [+ - =] [r w x] nom_du_fichier</code></li>
+<li>Pour le contenu d'un répertoire (de façon récursive) : <code>chmod -R [u g o a] [+ - =] [r w x] nom_du_répertoire</code></li>
+</ul>
+<p>Les lett<strong>res <code>u g o a</code> designe les </strong>types de propriétaires** concernés:</p>
+<ul>
+<li><code>u</code> <strong>propriétaire</strong> (user)</li>
+<li><code>g</code> <strong>groupe</strong> (group)</li>
+<li><code>o</code> les <strong>autres</strong> (others)</li>
+<li><code>a</code> <strong>tous</strong> (all)</li>
+</ul>
+<p>Les lettres <code>+ - =</code> désignent les <strong>changements d'état</strong>: <code>+</code> et <code>-</code> pour <strong>ajouter</strong> ou <strong>retirer</strong> un type de droit aux droits courants, et l'opérateur <code>=</code> pour les écraser.</p>
+<p>Les lettres <code>r w x</code> désignent les <strong>permissions</strong>: <strong>read, write, execute</strong>.</p>
+<p>Exemple d'utilisation avec le système de fichier utilisé dans les exemples précédents :</p>
+<p>Sophie propriétaire d'un fichier <code>jeu.py</code> situé dans le répertoire <code>NSI</code>. Elle a les droits de lecture, d'écriture et d'execution. Les utilisateurs ,appartenant au même groupe que Sophie, ont les droits de lecture mais ceux de d'écriture et d'execution. Les autres utilisateurs n'ont aucun droits. On peut visualiser ça avec la commande <code>ls -l</code>.</p>
+<div class="highlight"><pre><span></span><code> sophie@ma_machine:NSI$ ls -l
+total <span class="m">28</span>
+-rwxr----- <span class="m">1</span> sophie sophie <span class="m">2690</span>  <span class="m">15</span> sept. <span class="m">10</span>:39 jeu.py
+</code></pre></div>
+<p>Elle souhaite ajouter les droits d'execution aux personnes faisant partie de son groupe sans leur donner la possibilité de modifier (d'écrire) dans le fichier et uniquement les droits de lecture aux autres.</p>
+<p><div class="highlight"><pre><span></span><code>sophie@ma_machine:NSI$ chmod g+x,o+r jeu.py
+sophie@ma_machine:NSI$ ls -l
+total <span class="m">28</span>
+-rwxr-xr-- <span class="m">1</span> sophie sophie <span class="m">2690</span>  <span class="m">15</span> sept. <span class="m">10</span>:39 jeu.py
+</code></pre></div>
+La virgule permet de faire plusieurs modifications dans la même commande</p>
+<h3 id="44-notation-octale">4.4 Notation octale<a class="headerlink" href="#44-notation-octale" title="Permanent link">⚓︎</a></h3>
+<p>Pour modifier toutes les permission d'une seule commande, on utilise la notation octale (On reviendra sur cette partie un peu plus tard dans l'année).</p>
+<p><img alt="Image" src="../img/chmod-octal.png" /></p>
 
               
 <script src="../../../js/ide.js"></script> 
