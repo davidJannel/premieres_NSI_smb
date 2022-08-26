@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours premières spécialité NSI">
+      
+      
+      
+        <link rel="canonical" href="https://davidjannel.github.io/premieres_NSI_smb/Programmation/constructions_elementaires/cours/">
+      
+      <link rel="icon" href="../../../xtra/logo.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+    
+    
+      
+        <title>CH4 : Constructions élémentaires - Premières NSI - Lycée Ste Marie</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+    <!-- favicons -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/images/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" href="../assets/images/favicon_96x96.png" sizes="96x96">
+    <link rel="icon" href="../assets/images/favicon_144x144.png" sizes="144x144">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/massilia-maths.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+    
+      <link rel="stylesheet" href="../../../xtra/stylesheets/qcm.css">
+    
+      <link rel="stylesheet" href="../../../xtra/stylesheets/ajustements.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ch4-constructions-elementaires" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Premières NSI - Lycée Ste Marie" class="md-header__button md-logo" aria-label="Premières NSI - Lycée Ste Marie" data-md-component="logo">
+      
+  <img src="../../../xtra/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Premières NSI - Lycée Ste Marie
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CH4 : Constructions élémentaires
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidJannel/premieres_NSI_smb" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Spécialité NSI
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Architecture/sommaire/" class="md-tabs__link">
+        Architecture
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Programmation
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Types%20bases/Booleens/cours/" class="md-tabs__link">
+        Types bases
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../xtra/end_REM/" class="md-tabs__link">
+        Xtra
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Premières NSI - Lycée Ste Marie" class="md-nav__button md-logo" aria-label="Premières NSI - Lycée Ste Marie" data-md-component="logo">
+      
+  <img src="../../../xtra/logo.png" alt="logo">
+
+    </a>
+    Premières NSI - Lycée Ste Marie
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidJannel/premieres_NSI_smb" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Spécialité NSI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Architecture/sommaire/" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Architecture/IHM/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          OS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          OS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Architecture/OS/cours/" class="md-nav__link">
+        CH3 : Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Von Neumann partie 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Von Neumann partie 1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Von Neumann partie 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Architecture/Von%20Neumann%20partie%201/cours/" class="md-nav__link">
+        CH1 : Constituants et périphériques d'une machine
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Von Neumann partie 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Von Neumann partie 2" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Von Neumann partie 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Architecture/Von%20Neumann%20partie%202/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Constructions elementaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Constructions elementaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Constructions elementaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CH4 : Constructions élémentaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CH4 : Constructions élémentaires
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-sequence-variables-affectation" class="md-nav__link">
+    1. Séquence, Variables, Affectation
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Séquence, Variables, Affectation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-sequence-dintructions" class="md-nav__link">
+    1.1 Séquence d'intructions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-variables" class="md-nav__link">
+    1.2 Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-typage-des-variables" class="md-nav__link">
+    1.3 Typage des variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-instructions-conditionnelles" class="md-nav__link">
+    2. Instructions conditionnelles
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Instructions conditionnelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-if" class="md-nav__link">
+    2.1 if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-if-else" class="md-nav__link">
+    2.2 ìf / else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-if-elif-else" class="md-nav__link">
+    2.3 if / elif / else
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-boucles" class="md-nav__link">
+    3. Boucles
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Boucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-boucle-bornee" class="md-nav__link">
+    3.1 Boucle bornée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-boucle-non-bornee" class="md-nav__link">
+    3.2 Boucle non bornée
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-fonctions" class="md-nav__link">
+    4. Fonctions
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definition-dune-fonction" class="md-nav__link">
+    4.1 Définition d'une fonction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-portee-des-variables" class="md-nav__link">
+    4.2 Portée des variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Types bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Types bases" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Types bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Booleens
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Booleens" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Booleens
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Types%20bases/Booleens/cours/" class="md-nav__link">
+        CH2 : Les opérateurs booléens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Xtra
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Xtra" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Xtra
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xtra/end_REM/" class="md-nav__link">
+        end REM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xtra/start_REM/" class="md-nav__link">
+        start REM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+  <a href="https://github.com/davidJannel/premieres_NSI_smb/tree/main/docs/Programmation/constructions_elementaires/cours.md" title="Editer cette page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="ch4-constructions-elementaires">CH4 : Constructions élémentaires<a class="headerlink" href="#ch4-constructions-elementaires" title="Permanent link">⚓︎</a></h1>
+<details class="note">
+<summary>Programme officiel</summary>
+<p><img alt="Image" src="../img/bo.png" /></p>
+</details>
+<p><strong>Programmer un ordinateur, c'est quoi ?</strong> Programmer, c'est créer des programmes (suite d'instructions données à l'ordinateur) ! Un ordinateur sans programme ne sait rien faire. Il existe différents langages qui permettent de programmer un ordinateur, mais le seul directement utilisable par le processeur est le <strong>langage machine</strong> (suite de 1 et de 0). Aujourd'hui (presque) plus personne ne programme en langage machine (trop compliqué).</p>
+<p>Les informaticiens utilisent des instructions (mots souvent en anglais) en lieu et place de la suite de 0 et de 1. Ces instructions, une fois écrites par le programmeur, sont "traduites" en langage machine. Un programme spécialisé assure cette traduction. Ce système de traduction s'appellera <strong>interpréteur</strong> ou bien <strong>compilateur</strong>, suivant la méthode utilisée pour effectuer la traduction.</p>
+<p>Il existe 2 grandes familles de langages de programmation :</p>
+<p>Les <strong>langages de bas niveau</strong> sont très complexes à utiliser, car très éloignés du langage naturel, on dit que ce sont des langages « proches de la machine », en contrepartie ils permettent de faire des programmes très rapides à l'exécution. L'<strong>assembleur</strong> est le langage de bas niveau. Certains "morceaux" de programmes sont écrits en assembleur encore aujourd'hui.</p>
+<p>Les langages de <strong>haut niveau</strong> sont eux plus "faciles" à utiliser, car plus proches du langage naturel (exemple : si a=3 alors b=c). Exemples de langages de haut niveau : <strong>C</strong>, <strong>C++</strong> , <strong>Java</strong>, <strong>Python</strong>...</p>
+<p>En NSI, notre langage de prédilection sera Python.</p>
+<h2 id="1-sequence-variables-affectation">1. Séquence, Variables, Affectation<a class="headerlink" href="#1-sequence-variables-affectation" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-sequence-dintructions">1.1 Séquence d'intructions<a class="headerlink" href="#11-sequence-dintructions" title="Permanent link">⚓︎</a></h3>
+<p>Un programme est une suite d'<strong>instructions</strong> écrite dans un langage.
+En Python, les <strong>instructions</strong> (lignes du programme) sont <strong>évaluées</strong> et <strong>exécutées de haut en bas</strong>, à l'exception des lignes de commentaires qui commencent <code>#</code>.</p>
+<details class="python">
+<summary>Exemple :</summary>
+<p>Le programme ci-dessous n'affiche que <code>Bonjour</code> en sortie car la deuxième ligne est commentée.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span><span class="p">)</span>
+<span class="c1"># print(&quot;aux élèves de première NSI.&quot;)</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<h3 id="12-variables">1.2 Variables<a class="headerlink" href="#12-variables" title="Permanent link">⚓︎</a></h3>
+<p>C'est une information (une donnée) temporaire que l'on stocke dans une case de la RAM. On dit qu'elle est "variable", car c'est une valeur qui peut changer pendant le déroulement du programme.</p>
+<div class="admonition savoir">
+<p class="admonition-title">À savoir</p>
+<p>Une variable est constituée de 2 choses :</p>
+<ul>
+<li>une <strong>valeur</strong> présente en mémoire (un nombre entier, un nombre à virgule, un booléen, une chaine de caractères, ...);</li>
+<li>un <strong>nom</strong>.</li>
+</ul>
+<p>Une variable est l'association d'un nom et d'une valeur.</p>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">12</span>
+</code></pre></div>
+<p>Grâce à cette ligne, nous avons défini une variable qui porte le nom <code>i</code>. Ce nom <code>i</code> est associé à la valeur <code>12</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<p>Le signe <code>=</code> n'a pas la même signification qu'en mathématique. C'est le signe d'<strong>affectation</strong>. Si on écrit <code>i = i + 1</code>, cela signifie que l'on ajoute <code>1</code> à la valeur de <code>i</code>. Le "nom" <code>i</code> pointe maintenant vers la "valeur" <code>13</code>.</p>
+<p><img alt="Image" class="center" src="../img/memex.png" /></p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nommage des variables</p>
+<p>Les règles à respecter :</p>
+<ul>
+<li>
+<p>le nom de la variable peut contenir les caractères suivants :</p>
+<ul>
+<li>des lettres non accentuées (attention, minuscule et majuscule sont des caractères différents)</li>
+<li>des chiffres (mais pas comme premier caractère)</li>
+<li>le tiret du bas _ (underscore, tiret du 8)</li>
+</ul>
+</li>
+<li>
+<p>le nom de la variable ne doit pas commencer par un chiffre</p>
+</li>
+<li>le nom de la variable ne doit pas contenir d'espace</li>
+<li>le nom de la variable ne doit pas être un mot-clé du langage.</li>
+</ul>
+<p>Et surtout des noms explicites !</p>
+<div class="admonition info inline">
+<p class="admonition-title">Pas bien :</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+	<span class="n">cep</span> <span class="o">=</span> <span class="n">cep</span> <span class="o">+</span> <span class="n">vm</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Bien :</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">date</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+	<span class="n">compte_epargne</span> <span class="o">=</span> <span class="n">compte_epargne</span> <span class="o">+</span> <span class="n">versement_mensuel</span>
+</code></pre></div>
+</div>
+<p>On utilisera la convention <strong><code>snake_case</code></strong> pour les noms à rallonge.</p>
+</div>
+<h3 id="13-typage-des-variables">1.3 Typage des variables<a class="headerlink" href="#13-typage-des-variables" title="Permanent link">⚓︎</a></h3>
+<p>Pour différencier la nature de ce que peut contenir une variable, on parle de <strong>type de variable</strong>.</p>
+<p>En voici quelques uns, que nous découvrirons au fil de l'année :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Types de base</p>
+<p>Voici les types Python les plus fréquemment utilisés cette année:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type Python</th>
+<th align="center">Traduction</th>
+<th align="center">Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>int</code></td>
+<td align="center">entier</td>
+<td align="center"><code>42</code></td>
+</tr>
+<tr>
+<td align="center"><code>float</code></td>
+<td align="center">flottant (décimal)</td>
+<td align="center"><code>3.1416</code></td>
+</tr>
+<tr>
+<td align="center"><code>str</code></td>
+<td align="center">chaîne de caractères (string)</td>
+<td align="center"><code>"NSI"</code></td>
+</tr>
+<tr>
+<td align="center"><code>bool</code></td>
+<td align="center">booléen (True ou False)</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center"><code>tuple</code></td>
+<td align="center">p-uplet</td>
+<td align="center"><code>(255, 127, 0)</code></td>
+</tr>
+<tr>
+<td align="center"><code>list</code></td>
+<td align="center">liste</td>
+<td align="center"><code>[0, 1, 2, 3, 4, 5]</code></td>
+</tr>
+<tr>
+<td align="center"><code>dict</code></td>
+<td align="center">dictionnaire</td>
+<td align="center"><code>{'Homer':43, 'Marge':41, 'Bart':12, 'Lisa':10, 'Maggie':4}</code></td>
+</tr>
+<tr>
+<td align="center"><code>function</code></td>
+<td align="center">fonction</td>
+<td align="center"><code>print</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Comment connaître le type d'une variable ?</p>
+<p>Il suffit dans la console d'utiliser la fonction <code>type</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<h2 id="2-instructions-conditionnelles">2. Instructions conditionnelles<a class="headerlink" href="#2-instructions-conditionnelles" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-if">2.1 if<a class="headerlink" href="#21-if" title="Permanent link">⚓︎</a></h3>
+<p>La structure conditionnelle <code>if</code> permet exécuter une (ou plusieurs) instruction(s) <strong>SI</strong> une condition est <strong>vraie</strong> (et seulement dans ce cas là).</p>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;T&#39;as quel âge ? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tu es mineur&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<ul>
+<li>Remarquer que dans ce cas, il n'y aura aucun affichage si l'age est supérieur (ou égal) à 18.</li>
+<li>présence obligatoire du <strong><code>:</code></strong> après la condition et <strong>indentation</strong> du bloc d'instruction.</li>
+</ul>
+</div>
+<h4 id="levaluation-de-la-condition">L'évaluation de la condition<a class="headerlink" href="#levaluation-de-la-condition" title="Permanent link">⚓︎</a></h4>
+<p>L'expression qui suit le <code>if</code> est <strong>évaluée</strong> par Python lors de l'exécution du programme.</p>
+<p>Cette évaluation renvoie un booléen, <code>True</code> ou <code>False</code>.</p>
+<p>Les symboles de comparaison (ou d'appartenance) permettant d'écrire une condition sont :</p>
+<div class="admonition info inline">
+<p class="admonition-title">Opérateurs de comparaison</p>
+<table>
+<thead>
+<tr>
+<th align="center">Opérateur</th>
+<th align="center">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>==</code></td>
+<td align="center">est égal à</td>
+</tr>
+<tr>
+<td align="center"><code>!=</code></td>
+<td align="center">est différent de</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="center">inférieur à</td>
+</tr>
+<tr>
+<td align="center"><code>&gt;</code></td>
+<td align="center">supérieur à</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;=</code></td>
+<td align="center">inférieur ou égal à</td>
+</tr>
+<tr>
+<td align="center"><code>&gt;=</code></td>
+<td align="center">supérieur ou égal à</td>
+</tr>
+<tr>
+<td align="center"><code>in</code></td>
+<td align="center">appartient à</td>
+</tr>
+<tr>
+<td align="center"><code>not in</code></td>
+<td align="center">n'appartient pas à</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Exemples</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">1</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abracadabra&#39;</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;b&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abracadabra&#39;</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;A&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;abracadabra&#39;</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">True</span>
+<span class="kc">False</span>
+</code></pre></div>
+</div>
+<p>De plus, ces conditions peuvent être combinées avec (par exemple) les mots-clés <code>and</code> ou <code>or</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">15</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">30</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">2000</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">30</span>
+<span class="kc">True</span>
+</code></pre></div>
+<h3 id="22-if-else">2.2 ìf / else<a class="headerlink" href="#22-if-else" title="Permanent link">⚓︎</a></h3>
+<p>La structure conditionnelle <code>if</code>.. <code>else</code>.. permet de n'exécuter une (ou plusieurs) instruction(s), que <strong>SI</strong> la condition du <code>if</code> est <strong>Vraie</strong>, <strong>SINON</strong> ce sont les (autres) instructions situées après le else qui sont exécutées.</p>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;T&#39;as quel âge ? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tu es mineur&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tu es majeur&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Dans tous les cas (quel que soit l'âge), une des deux phrase est affichée (on ne peut oublier personne).</p>
+<h3 id="23-if-elif-else">2.3 if / elif / else<a class="headerlink" href="#23-if-elif-else" title="Permanent link">⚓︎</a></h3>
+<p>La structure conditionnelle <code>if</code> .. <code>elif</code> .. <code>else</code> .. permet de réaliser plusieurs (plus de deux) tests de comparaison.</p>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;T&#39;as quel âge ? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">age</span><span class="o">&lt;</span><span class="mi">18</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;T&#39;es trop jeune&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span> <span class="c1"># else if &lt;=&gt; elif</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;T&#39;es jeune, t&#39;es sympa!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="c1"># dans tous les autres cas (age &gt;= 30)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;T&#39;es trop vieux!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="3-boucles">3. Boucles<a class="headerlink" href="#3-boucles" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-boucle-bornee">3.1 Boucle bornée<a class="headerlink" href="#31-boucle-bornee" title="Permanent link">⚓︎</a></h3>
+<h4 id="a-iterable">a. Iterable<a class="headerlink" href="#a-iterable" title="Permanent link">⚓︎</a></h4>
+<p>Lorsqu'on peut associer un nombre à chaque élément d'un ensemble, on dit que l'ensemble est <strong>dénombrable</strong>. Les élèves aux lycée sont un ensemble dénombrable. En informatique, lorqu'on peut énumérer les éléments d'un objet on parle d'<strong>iterables</strong>.</p>
+<p>Exemples :</p>
+<ul>
+<li><code>NSI</code> (type <code>str</code>) est itérable : il y a 3 caractères <code>N</code>, <code>S</code> et <code>I</code>;</li>
+<li><code>[2, 7, 8]</code> (type <code>list</code>) est itérable : il y a 3 éléments <code>2</code>, <code>7</code> et <code>8</code>;</li>
+<li><code>5.3</code> (type <code>float</code>) n'est pas itérable. On ne peut pas le décomposer.</li>
+</ul>
+<h4 id="b-structure-de-la-boucle-for">b. Structure de la boucle <code>for</code><a class="headerlink" href="#b-structure-de-la-boucle-for" title="Permanent link">⚓︎</a></h4>
+<div class="admonition savoir">
+<p class="admonition-title">À connaître</p>
+<p>La boucle for s'utilise lorsque :</p>
+<ul>
+<li>on veut parcourir un à un les éléments d'un <strong>objet itérable</strong> (une chaîne de caractère, une liste...);</li>
+<li>on veut répéter une action un nombre de fois <strong>connu à l'avance</strong>. On parle de boucle <strong>bornée</strong>.</li>
+</ul>
+<p>La structure générale est :</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+	<span class="n">instruction</span> <span class="mi">1</span>
+	<span class="n">instruction</span> <span class="mi">2</span>
+	<span class="o">...</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<ul>
+<li>le mot <code>in</code> permet de parcourir l'itérable;</li>
+<li><code>:</code> obligatoire;</li>
+<li>indentation obligatoire du bloc d'instruction(s).</li>
+</ul>
+</div>
+</div>
+<p>Des exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="s1">&#39;NSI&#39;</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+<span class="n">N</span>
+<span class="n">S</span>
+<span class="n">I</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NSI&#39;</span><span class="p">)</span>
+<span class="n">NSI</span>
+<span class="n">NSI</span>
+<span class="n">NSI</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">nb</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">nb</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">6</span>
+<span class="mi">10</span>
+</code></pre></div>
+<details class="note">
+<summary>Remarques</summary>
+<details class="python">
+<summary>Fonction <code>range</code></summary>
+<p>La fonction <code>range</code> possède trois arguments dont deux sont optionnels :</p>
+<ul>
+<li><code>range(n)</code> renvoie un itérateur parcourant les entiers consécutifs entre <strong>0</strong> et <strong>n exclu</strong>;</li>
+<li><code>range(m, n)</code> renvoie un itérateur parcourant les entiers consécutifs entre <strong>m</strong> et <strong>n exclu</strong>;</li>
+<li><code>range(m, n, p)</code> renvoie un itérateur parcourant les entiers consécutifs entre <strong>m</strong> et <strong>n exclu</strong> avec un <strong>pas de p</strong>;</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="mi">10</span>
+<span class="mi">8</span>
+<span class="mi">6</span>
+<span class="mi">4</span>
+<span class="mi">2</span>
+<span class="mi">0</span>
+</code></pre></div>
+</details>
+<details class="python">
+<summary>Boucles imbriquées</summary>
+<p>Le bloc d'intruction(s) d'une boucle peut contenir une autre boucle.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+	<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+<span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="mi">2</span><span class="p">,</span> <span class="mi">0</span>
+<span class="mi">2</span><span class="p">,</span> <span class="mi">1</span>
+</code></pre></div>
+</details>
+</details>
+<h3 id="32-boucle-non-bornee">3.2 Boucle non bornée<a class="headerlink" href="#32-boucle-non-bornee" title="Permanent link">⚓︎</a></h3>
+<p>À la différence essentielle des boucles for, dont on peut savoir à l'avance combien de fois elles vont être exécutées, les boucles <strong>while</strong> sont des boucles dont on ne sort que lorsqu'une condition n'est plus satisfaite.</p>
+<p>Avec donc le risque de rester infiniment bloqué à l'intérieur !</p>
+<p><img alt="Image" class="center" src="../img/danger.jpg" width="60%" /></p>
+<div class="admonition savoir">
+<p class="admonition-title">À connaître</p>
+<p>Syntaxe à retenir pour la boucle while :</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+	<span class="n">instruction</span> <span class="mi">1</span>
+	<span class="n">instruction</span> <span class="mi">2</span>
+	<span class="o">...</span>
+</code></pre></div>
+L'évaluation de la condition est testée à chaque début de boucle :</p>
+<ul>
+<li><code>True</code> : on continue;</li>
+<li><code>False</code> : C'est terminé.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<ul>
+<li>présence obligatoire du <strong><code>:</code></strong> après la condition;</li>
+<li><strong>indentation</strong> obligatoire du bloc d'instruction(s);</li>
+<li>La condition doit être un <strong>booléen</strong> donc une expression évaluée à <code>True</code> ou à <code>False</code>.</li>
+</ul>
+</div>
+</div>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ok&quot;</span><span class="p">)</span>
+	<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fini&quot;</span><span class="p">)</span>
+<span class="n">Ok</span>
+<span class="n">Ok</span>
+<span class="n">Ok</span>
+<span class="n">fini</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Les pièges</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">ne JAMAIS SORTIR de la boucle</label><label for="__tabbed_1_2">ne JAMAIS RENTRER dans la boucle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ok&quot;</span><span class="p">)</span>
+	<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ok&quot;</span><span class="p">)</span>
+	<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<details class="note">
+<summary>Remarques</summary>
+<details class="note">
+<summary>Lien entre <code>for</code> et <code>while</code></summary>
+<p>La boucle bornée <code>for</code> que nous avons étudiée est très pratique. Mais nous pourrions nous en passer : toutes les boucles for peuvent en fait être ré-écrites en utilisant <code>while</code>. (alors que la réciproque est fausse).</p>
+</details>
+<details class="note">
+<summary>Boucle infinie volontaire</summary>
+<p>La boucle infinie a été présentée comme un danger qu'il faut éviter. Pourtant, dans quelques situations, il est d'usage d'enfermer volontairement l'utilisateur dans une boucle infinie (jeux, affichage, ...).</p>
+<p>Exemple :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+    <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;tapez sur la lettre S du clavier pour me sortir de cet enfer : &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span> <span class="ow">or</span> <span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;merci, j&#39;étais bloqué dans une boucle infinie&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Le début du code : <code>while True</code> est typique des boucles infinies volontaires.
+Et l'expression <code>break</code> qui comme son nom l'indique permet de casser la boucle et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.</p>
+</details>
+</details>
+<h2 id="4-fonctions">4. Fonctions<a class="headerlink" href="#4-fonctions" title="Permanent link">⚓︎</a></h2>
+<p>Les fonctions permettent de décomposer un programme complexe en une série de sous-programmes plus simples. De plus, les fonctions sont réutilisables : si nous disposons d'une fonction capable de calculer une racine carrée, par exemple, nous pouvons l'utiliser un peu partout dans notre programme sans avoir à la réécrire à chaque fois.</p>
+<h3 id="41-definition-dune-fonction">4.1 Définition d'une fonction<a class="headerlink" href="#41-definition-dune-fonction" title="Permanent link">⚓︎</a></h3>
+<p>La notion de fonction en informatique est comparable à la notion de fonction en mathématiques.</p>
+<p><img alt="Image" class="center" src="../img/cours_fonction2.png" /></p>
+<div class="admonition savoir">
+<p class="admonition-title">À retenir</p>
+<p>Voici la syntaxe employée en Python pour définir une fonction.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nom_de_fonction</span><span class="p">(</span><span class="n">parametre</span><span class="p">):</span>
+	<span class="n">instruction</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+	<span class="o">...</span>
+	<span class="k">return</span> <span class="n">valeur_renvoyee</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<ul>
+<li>ne pas oublier les <code>:</code>;</li>
+<li>Le décalage entre la ligne 1 et le reste du code est appellé <strong>indentation</strong>. Ce bloc de code correspond au contenu de la fonction. Pour indenter vous insérer une tabulation <span class="keys"><kbd class="key-tab">Tab</kbd></span>.</li>
+<li>en l'absence du mot <code>return</code>, la fonction renvoie <strong><code>None</code></strong> cad "rien"!</li>
+</ul>
+</div>
+</div>
+<details class="python">
+<summary>Bien / Pas bien</summary>
+<p>On veut créer une fonction <code>calculer_surface_carre</code> qui prend en paramètre un nombre <code>arrete</code> et qui renvoie la surface du carré d'arrête <code>arrete</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Bien</label><label for="__tabbed_2_2">Pas bien</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">calculer_surface_carre</span><span class="p">(</span><span class="n">arrete</span><span class="p">):</span>
+	<span class="n">surface</span> <span class="o">=</span> <span class="n">arrete</span> <span class="o">**</span> <span class="mi">2</span>
+	<span class="k">return</span> <span class="n">surface</span>
+</code></pre></div></td></tr></table></div>
+Les appels de fonctions donnent bien le résultat attendu.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cote</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La surface d&#39;un carré d&#39;arrête </span><span class="si">{</span><span class="n">cote</span><span class="si">}</span><span class="s2"> est de </span><span class="si">{</span><span class="n">calculer_surface_carre</span><span class="p">(</span><span class="n">cote</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="n">La</span> <span class="n">surface</span> <span class="n">d</span><span class="s1">&#39;un carré d&#39;</span><span class="n">arrête</span> <span class="mi">2</span> <span class="n">est</span> <span class="n">de</span> <span class="mf">4.</span>
+</code></pre></div>
+<p><code>calculer_surface_carre(cote)</code> revient à calculer <code>calculer_surface_carre(2)</code> et cette expression est évaluée à <code>4</code>.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">calculer_surface_carre</span><span class="p">(</span><span class="n">arrete</span><span class="p">):</span>
+	<span class="n">surface</span> <span class="o">=</span> <span class="n">arrete</span> <span class="o">**</span> <span class="mi">2</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">surface</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Dans un premier temps, on a l'impression que la fonction fait le "job".</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">calculer_surface_carre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div>
+<p>Ben ça marche ! Sauf que "y a pas de <code>return</code>" ! La fonction ne renvoie rien. Elle ne fait que de l'affichage.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cote</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La surface d&#39;un carré d&#39;arrête </span><span class="si">{</span><span class="n">cote</span><span class="si">}</span><span class="s2"> est de </span><span class="si">{</span><span class="n">calculer_surface_carre</span><span class="p">(</span><span class="n">cote</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="n">La</span> <span class="n">surface</span> <span class="n">d</span><span class="s1">&#39;un carré d&#39;</span><span class="n">arrête</span> <span class="mi">2</span> <span class="n">est</span> <span class="n">de</span> <span class="kc">None</span><span class="o">.</span>
+</code></pre></div>
+<p>C'est bof bof !</p>
+</div>
+</div>
+</div>
+<p><img alt="Image" class="center" src="../img/yoda.png" width="60%" /></p>
+</details>
+<h3 id="42-portee-des-variables">4.2 Portée des variables<a class="headerlink" href="#42-portee-des-variables" title="Permanent link">⚓︎</a></h3>
+<div class="admonition savoir">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Les variables définies dans le corps d'une fonction sont appelées <strong>variables locales</strong>.</li>
+<li>Les variables définies dans le corps du programme (sous-entendu : pas à l'intérieur d'une fonction) sont appelées <strong>variables globales</strong>.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Règles d'accès aux variables locales et globales <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<ul>
+<li><strong>règle 1 :</strong> une <strong>variable locale</strong> (définie au cœur d'une fonction) est <strong>inaccessible</strong> hors de cette fonction.</li>
+<li><strong>règle 2 :</strong> une <strong>variable globale</strong> (définie à l'extérieur d'une fonction) est <strong>accessible</strong> en <strong>lecture</strong> à l'intérieur d'une fonction.</li>
+<li><strong>règle 3 :</strong> une <strong>variable globale</strong> (définie à l'extérieur d'une fonction) <strong>ne peut pas être modifiée</strong> à l'intérieur d'une fonction.</li>
+</ul>
+</div>
+<p><img alt="image" class="center" src="../img/global_regles.png" width="80%" /></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction code A</label><label for="__tabbed_3_3">Correction code B</label><label for="__tabbed_3_4">Correction code C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>On considère les 3 codes ci-dessous. Pour chacun, dire <strong>sans l'exécuter</strong> s'il est valide ou non. S'il ne l'est pas, identifier la règle (parmi celles énoncées ci-dessus) qui est bafouée.
+<strong>code A</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">points</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">verdict</span><span class="p">(</span><span class="n">reponse</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">reponse</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">points</span> <span class="o">+=</span> <span class="mi">3</span>
+<span class="n">verdict</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<strong>code B</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">bouge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">decalage</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="n">decalage</span>
+<span class="n">bouge</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<strong>code C</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">test_bac</span><span class="p">(</span><span class="n">moyenne</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;admis !&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">coup_de_pouce</span><span class="p">(</span><span class="n">note</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">note</span> <span class="o">+</span> <span class="n">bonus</span>
+<span class="n">bonus</span> <span class="o">=</span> <span class="mf">0.6</span>
+<span class="n">ma_moyenne</span> <span class="o">=</span> <span class="mf">9.5</span>
+<span class="n">ma_moyenne</span> <span class="o">=</span> <span class="n">coup_de_pouce</span><span class="p">(</span><span class="n">ma_moyenne</span><span class="p">)</span>
+<span class="n">test_bac</span><span class="p">(</span><span class="n">ma_moyenne</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<div class="tabbed-block">
+<p>Ce code n'est pas valide, car il contrevient à la règle 3.
+<code>ligne 4</code> : la modification de la variable globale <code>points</code> est interdite.</p>
+</div>
+<div class="tabbed-block">
+<p>Ce code n'est pas valide, car il contrevient à la règle 1.
+<code>ligne 5</code> : l'accès à la variable locale <code>x</code> est interdit.</p>
+</div>
+<div class="tabbed-block">
+<p>Ce code est valide.
+<code>ligne 6</code> : l'accès à la variable globale <code>bonus</code> est autorisé, selon la règle 2.</p>
+</div>
+</div>
+</div>
+</div>
+<details class="tip">
+<summary>Sources</summary>
+<p>Pages tirées de :</p>
+<ul>
+<li><a href="https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/sommaire/">https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/sommaire/</a></li>
+<li><a href="https://dav74.github.io/site_nsi_prem/c1c/">https://dav74.github.io/site_nsi_prem/c1c/</a></li>
+<li><a href="https://www.lyceum.fr/1g/nsi/7-langages-et-programmation/1-les-ingredients-dun-algorithme">https://www.lyceum.fr/1g/nsi/7-langages-et-programmation/1-les-ingredients-dun-algorithme </a></li>
+<li><a href="https://eskool.gitlab.io/1nsi/python/">https://eskool.gitlab.io/1nsi/python/</a></li>
+<li><a href="http://frederic-junier.org/NSI/premiere/chapitre1/">http://frederic-junier.org/NSI/premiere/chapitre1/</a></li>
+</ul>
+</details>
+<!-- !!! danger "À propos de la règle n°3"
+    _(toute la vérité, rien que la vérité)_
+    Pour certains types de variables (listes, dictionnaires...), la modification d'une variable globale à l'intérieur du corps d'une fonction est en fait possible (contrairement à ce qu'énonce la règle 3). Mais cela reste très fortement déconseillé.
+
+    Une fonction ne **doit** (c'est un ordre, mais vous pouvez choisir de l'ignorer, tout comme vous pouvez choisir de passer au feu rouge) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètre. 
+    Une fonction qui ne respecte pas cette règle présente des **effets de bord** : on peut peut-être arriver à les gérer sur un «petit» code, mais cela devient illusoire sur un code utilisant de multiples fonctions.  -->
+
+<!--  En résumé :
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">ramasse_objet</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;champignon&quot;</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="mi">20</span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;banane&quot;</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
+<span class="c1"># BIEN</span>
+<span class="c1"># -------- Attention le code ci-dessous est faux, il sera bientôt enlevé ------------------- </span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">ramasse_objet</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>  <span class="c1"># ma fonction veut modifier score ? </span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;champignon&quot;</span><span class="p">:</span>     <span class="c1"># -&gt; ok, je mets score dans ses paramètres</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="mi">20</span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;banane&quot;</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
+</code></pre></div></td></tr></table></div>
+
+ -->
+
+              
+<script src="../../../js/ide.js"></script> 
+
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../../../Architecture/Von%20Neumann%20partie%202/cours/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Cours" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Cours
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../Types%20bases/Booleens/cours/" class="md-footer__link md-footer__link--next" aria-label="Suivant: CH2 : Les opérateurs booléens" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              CH2 : Les opérateurs booléens
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA / D. Jannel
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a877e258.min.js"></script>
+      
+        <script src="../../../xtra/javascripts/mathjax-config.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../xtra/javascripts/interpreter.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/massilia-maths.js"></script>
+      
+    
+  </body>
+</html>
