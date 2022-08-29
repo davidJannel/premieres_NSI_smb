@@ -2,52 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/sommaire/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/IHM/cours/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/OS/cours/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/Von%20Neumann%20partie%201/cours/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Architecture/Von%20Neumann%20partie%202/cours/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Programmation/sommaire/</loc>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Programmation/constructions_elementaires/cours/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20bases/sommaire/</loc>
+         <lastmod>2022-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20bases/Bases/cours/</loc>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20bases/Booleens/cours/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20construits/sommaire/</loc>
+         <lastmod>2022-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20construits/p_uplets/cours/</loc>
+         <lastmod>2022-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20construits/tableaux/cours/</loc>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/xtra/end_REM/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/xtra/start_REM/</loc>
-         <lastmod>2022-08-26</lastmod>
+         <lastmod>2022-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

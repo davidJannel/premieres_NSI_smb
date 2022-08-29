@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://davidjannel.github.io/premieres_NSI_smb/Types%20bases/Booleens/cours/">
+        <link rel="canonical" href="https://davidjannel.github.io/premieres_NSI_smb/Types%20bases/Bases/cours/">
       
       <link rel="icon" href="../../../xtra/logo.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>Opérateurs booléens - Premières NSI - Lycée Ste Marie</title>
+        <title>Bases - Premières NSI - Lycée Ste Marie</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ch2-les-operateurs-booleens" class="md-skip">
+        <a href="#ch5-ecrire-un-entier-positif-dans-une-base-superieure-ou-egale-a-2" class="md-skip">
           Aller au contenu
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Opérateurs booléens
+              Bases
             
           </span>
         </div>
@@ -678,6 +678,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../Booleens/cours/" class="md-nav__link">
+        Opérateurs booléens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -690,12 +704,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Opérateurs booléens
+          Bases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Opérateurs booléens
+        Bases
       </a>
       
         
@@ -714,44 +728,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-le-calcul-booleen" class="md-nav__link">
-    1. Le calcul booléen
+  <a href="#1-ecriture-des-nombres-entiers-positifs-en-base-10" class="md-nav__link">
+    1. Écriture des nombres entiers positifs en base 10
   </a>
   
-    <nav class="md-nav" aria-label="1. Le calcul booléen">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-representation-en-base-2-des-entiers-positifs" class="md-nav__link">
+    2. Représentation en base 2 des entiers positifs
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Représentation en base 2 des entiers positifs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-un-peu-dhistoire" class="md-nav__link">
-    1.1 Un peu d'histoire
+  <a href="#21-bits-et-mots-machine" class="md-nav__link">
+    2.1 Bits et mots machine
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-variable-booleenne" class="md-nav__link">
-    1.2 Variable booléenne
+  <a href="#22-convertion-binaire-decimal" class="md-nav__link">
+    2.2 Convertion binaire -&gt; décimal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-operateurs-booleens" class="md-nav__link">
-    1.3 Opérateurs booléens
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-evaluation-dune-expression-booleenne" class="md-nav__link">
-    1.4 Évaluation d'une expression booléenne
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-les-expressions-booleennes-et-python" class="md-nav__link">
-    1.5 Les expressions booléennes et python
+  <a href="#23-convertion-decimal-binaire" class="md-nav__link">
+    2.3 Convertion décimal -&gt; binaire
   </a>
   
 </li>
@@ -762,16 +769,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-de-lexpression-booleenne-au-composant-electronique" class="md-nav__link">
-    2. De l'expression booléenne au composant électronique
+  <a href="#3-representation-hexadecimale-des-entiers-positifs" class="md-nav__link">
+    3. Représentation hexadécimale des entiers positifs
   </a>
   
-    <nav class="md-nav" aria-label="2. De l'expression booléenne au composant électronique">
+    <nav class="md-nav" aria-label="3. Représentation hexadécimale des entiers positifs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-un-peu-dhistoire" class="md-nav__link">
-    2.1 Un peu d'histoire
+  <a href="#31-les-chiffres-de-la-base-hexadecimale" class="md-nav__link">
+    3.1 Les chiffres de la base hexadécimale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-convertion-hexadecimal-decimal" class="md-nav__link">
+    3.2 Convertion hexadécimal -&gt; décimal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-convertion-decimal-hexadecimal" class="md-nav__link">
+    3.3 Convertion décimal -&gt; hexadécimal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ecriture-des-octets" class="md-nav__link">
+    3.4 Écriture des octets
   </a>
   
 </li>
@@ -782,15 +810,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#22-les-portes-logiques" class="md-nav__link">
-    2.2 Les portes logiques
+  <a href="#4-generalisation-pour-une-base-b-quelconque" class="md-nav__link">
+    4. Généralisation pour une base b quelconque
   </a>
+  
+    <nav class="md-nav" aria-label="4. Généralisation pour une base b quelconque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ecriture-de-nombres-en-base-b" class="md-nav__link">
+    4.1 Écriture de Nombres en Base b
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#23-circuit-combinatoire" class="md-nav__link">
-    2.3 Circuit combinatoire
+  <a href="#42-conversion-de-bases" class="md-nav__link">
+    4.2 Conversion de bases
   </a>
   
 </li>
@@ -799,20 +840,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Bases/cours/" class="md-nav__link">
-        Bases
-      </a>
     </li>
   
 
@@ -1171,309 +1198,342 @@
                 
 
 
-<h1 id="ch2-les-operateurs-booleens">CH2 : Les opérateurs booléens<a class="headerlink" href="#ch2-les-operateurs-booleens" title="Permanent link">⚓︎</a></h1>
+<h1 id="ch5-ecrire-un-entier-positif-dans-une-base-superieure-ou-egale-a-2">CH5 : Écrire un entier positif dans une base supérieure ou égale à 2<a class="headerlink" href="#ch5-ecrire-un-entier-positif-dans-une-base-superieure-ou-egale-a-2" title="Permanent link">⚓︎</a></h1>
 <details class="note">
 <summary>Programme officiel</summary>
 <p><img alt="Image" src="../img/bo.png" /></p>
 </details>
-<h2 id="1-le-calcul-booleen">1. Le calcul booléen<a class="headerlink" href="#1-le-calcul-booleen" title="Permanent link">⚓︎</a></h2>
-<h3 id="11-un-peu-dhistoire">1.1 Un peu d'histoire<a class="headerlink" href="#11-un-peu-dhistoire" title="Permanent link">⚓︎</a></h3>
-<p><img alt="Image" class="center" src="../img/portrait_boole.jpg" /></p>
-<p>En 1847, le britannique <strong>George BOOLE</strong> inventa un formalisme permettant d'écrire des raisonnements logiques : l'<strong>algèbre de Boole</strong>. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642).</p>
-<p>Bien plus tard, en 1938, les travaux de l'américain <strong>Claude SHANNON</strong> prouva que des circuits électriques peuvent résoudre tous les problèmes que l'algèbre de Boole peut elle-même résoudre. Pendant la deuxième guerre mondiale, les travaux d'<strong>Alan TURING</strong> puis de <strong>John VON NEUMANN</strong> poseront définitivement les bases de l'informatique moderne.</p>
-<h3 id="12-variable-booleenne">1.2 Variable booléenne<a class="headerlink" href="#12-variable-booleenne" title="Permanent link">⚓︎</a></h3>
+<h2 id="1-ecriture-des-nombres-entiers-positifs-en-base-10">1. Écriture des nombres entiers positifs en base 10<a class="headerlink" href="#1-ecriture-des-nombres-entiers-positifs-en-base-10" title="Permanent link">⚓︎</a></h2>
+<p>En <strong>base <span class="arithmatex">\(10\)</span></strong>, système <strong>décimal</strong>, il y exactement <strong>10 chiffres</strong> : <span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(4\)</span>, <span class="arithmatex">\(5\)</span>, <span class="arithmatex">\(6\)</span>, <span class="arithmatex">\(7\)</span>, <span class="arithmatex">\(8\)</span>, <span class="arithmatex">\(9\)</span>.</p>
+<p>Considérons un nombre entier, écrit en base <span class="arithmatex">\(10\)</span> (en décimal), par exemple <span class="arithmatex">\(2743\)</span> :</p>
+<p>On peut transformer l'écriture de ce nombre de la manière suivante :</p>
+<div class="arithmatex">\[\begin{align}
+2743 &amp;= 2000 + 700 + 40 + 3 \\
+&amp;= 2\times1000 + 7\times100 + 4\times10 + 3\times1 \\
+&amp;= 2\times10^3 + 7\times10^2 + 4\times10^1 + 3\times10^0
+\end{align}
+\]</div>
 <div class="admonition savoir">
 <p class="admonition-title">À savoir</p>
-<p><strong>Une variable booléenne</strong> est une variable qui ne peut prendre que deux valeurs possibles :</p>
+<p>En base <span class="arithmatex">\(10\)</span>, Tout nombre entier peut être écrit comme une somme coefficientée de <strong>puissances de <span class="arithmatex">\(10\)</span></strong>.</p>
+<p>Pour déterminer cette somme coefficientée :</p>
 <ul>
-<li>Vrai (<code>True</code> <img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" />) ou 1</li>
-<li>Faux (<code>False</code> <img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" />) ou 0</li>
+<li>Au dessus de chaque chiffre, <strong>de droite à gauche</strong>, on écrit des puissances croissantes de <span class="arithmatex">\(10\)</span> (en commençant par <span class="arithmatex">\(10^0\)</span>) :</li>
 </ul>
-<p>Une variable booléenne en Python est du type <code>bool</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
-</code></pre></div>
-</div>
-<p>Remarque : Ouvert/Fermé (interrupteur), Allumé/Éteint (lampe), 5V/0V (tension), Blanc/Noir (pixels d'une image noir et blanc) ... sont également des variables booléennes.</p>
-<h3 id="13-operateurs-booleens">1.3 Opérateurs booléens<a class="headerlink" href="#13-operateurs-booleens" title="Permanent link">⚓︎</a></h3>
+<div class="arithmatex">\[10^3\,\,10^2\,\,10^1\,\,10^0\]</div>
+<div class="arithmatex">\[ 2 \,\,\,\,\,\,\,\, 7 \,\,\,\,\,\,\,\, 4 \,\,\,\,\,\,\,3\]</div>
 <ul>
-<li>Un <strong>opérateur booléen</strong> est un opérateur mathématique qui manipule des variables booléennes.</li>
-<li>Une <strong>expression booléenne</strong> est une expression dont le résultat est un booléen.</li>
-<li>Un <strong>opérande</strong> est un élément sur lequel on applique un opérateur booléen.</li>
+<li>On multiplie chaque chiffre (= le coefficient) par la puissance de <span class="arithmatex">\(10\)</span> correspondante :</li>
 </ul>
-<h4 id="a-loperateur-not">a. L'opérateur <strong>not</strong><a class="headerlink" href="#a-loperateur-not" title="Permanent link">⚓︎</a></h4>
+<div class="arithmatex">\[2743 = 2\times10^3 + 7\times10^2 + 4\times10^1 + 3\times10^0\]</div>
+</div>
+<h2 id="2-representation-en-base-2-des-entiers-positifs">2. Représentation en base 2 des entiers positifs<a class="headerlink" href="#2-representation-en-base-2-des-entiers-positifs" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-bits-et-mots-machine">2.1 Bits et mots machine<a class="headerlink" href="#21-bits-et-mots-machine" title="Permanent link">⚓︎</a></h3>
+<p>Dans un ordinateur, toutes les informations (données ou programmes) sont représentées grâce à des 0 et des 1.</p>
 <div class="admonition savoir">
 <p class="admonition-title">À connaître</p>
-<p>L'opérateur <strong><code>not</code></strong> ("non" <img alt="🇫🇷" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1eb-1f1f7.svg" title=":fr:" />) est l'opérateur de négation : si on note a la variable d'entrée, not a ou <span class="arithmatex">\(\mathrm{\overline{a}}\)</span> renvoie la négation de a.</p>
-<p>Table de vérité de <code>not</code></p>
-<table>
-<thead>
-<tr>
-<th align="center">a</th>
-<th align="center">not a</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Un <strong>bit</strong> (pour BInary digiT) est un <span class="arithmatex">\(0\)</span> ou bien un <span class="arithmatex">\(1\)</span>;</li>
+<li>Un ensemble de <strong>8 bits</strong> est appelé un <strong>octet</strong> <img alt="🇫🇷" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1eb-1f1f7.svg" title=":fr:" /> ou un byte <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />;</li>
+<li>Un <strong>mot machine</strong> ou words <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" /> est un ensemble de <strong>2, 4 ou 8 octets</strong>.</li>
+</ul>
 </div>
-<div class="admonition python">
-<p class="admonition-title">En python</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">a</span><span class="p">)</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">a</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">b</span><span class="p">)</span>
-<span class="kc">True</span>
-</code></pre></div>
-</div>
-<h4 id="b-loperateur-and">b. L'opérateur <strong>and</strong><a class="headerlink" href="#b-loperateur-and" title="Permanent link">⚓︎</a></h4>
-<div class="admonition savoir">
-<p class="admonition-title">À connaître</p>
-<p>L'opérateur <strong><code>and</code></strong> ("et" <img alt="🇫🇷" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1eb-1f1f7.svg" title=":fr:" />) est un opérateur de <strong>conjonction</strong>. Si a et b sont deux variables booléennes, <code>a and b</code> renvoie <strong>Vrai</strong> si <code>a</code> et <code>b</code> sont Vrai toutes les deux, et <strong>Faux</strong> sinon.</p>
-<p>La table de vérité de <code>and</code></p>
-<table>
-<thead>
-<tr>
-<th align="center">a</th>
-<th align="center">b</th>
-<th align="center">a and b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition python">
-<p class="admonition-title">En python</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">c</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div>
-</div>
-<h4 id="c-loperateur-or">c. L'opérateur <strong>or</strong><a class="headerlink" href="#c-loperateur-or" title="Permanent link">⚓︎</a></h4>
-<div class="admonition savoir">
-<p class="admonition-title">À connaître</p>
-<p>L'opérateur <strong><code>or</code></strong> ("ou" <img alt="🇫🇷" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1eb-1f1f7.svg" title=":fr:" />) est un opérateur de <strong>disjonction</strong>. Si a et b sont deux variables booléennes, <code>a or b</code> renvoie <strong>Vrai</strong> quand au moins un des deux opérandes <code>a</code> ou <code>b</code> sont Vrai, et <strong>Faux</strong> sinon.</p>
-<p>La table de vérité de <code>or</code></p>
-<table>
-<thead>
-<tr>
-<th align="center">a</th>
-<th align="center">b</th>
-<th align="center">a or b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition python">
-<p class="admonition-title">En python</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">c</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span> <span class="ow">or</span> <span class="n">c</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div>
-</div>
-<h4 id="d-loperateur-xor">d. L'opérateur <strong>xor</strong><a class="headerlink" href="#d-loperateur-xor" title="Permanent link">⚓︎</a></h4>
-<div class="admonition savoir">
-<p class="admonition-title">À savoir</p>
-<p>L'opérateur <strong><code>xor</code></strong> ("ou exclusif" <img alt="🇫🇷" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1eb-1f1f7.svg" title=":fr:" />) est un opérateur de <strong>disjonction exclusive</strong>. Si a et b sont deux variables booléennes, <code>a xor b</code> renvoie <strong>Vrai</strong> un seul des deux opérandes <code>a</code> ou <code>b</code> sont Vrai, et <strong>Faux</strong> sinon.</p>
-<p>La table de vérité de <code>xor</code></p>
-<table>
-<thead>
-<tr>
-<th align="center">a</th>
-<th align="center">b</th>
-<th align="center">a xor b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="14-evaluation-dune-expression-booleenne">1.4 Évaluation d'une expression booléenne<a class="headerlink" href="#14-evaluation-dune-expression-booleenne" title="Permanent link">⚓︎</a></h3>
-<div class="admonition savoir">
-<p class="admonition-title">À connaître</p>
-<p>Il faut faire comme en mathématique. On doit tenir compte de la priorité des opérations et des parenthèses. Le <code>not</code> est prioritaire devant <code>and</code> qui lui-même est prioritaire devant <code>or</code> ou <code>xor</code>.</p>
-</div>
-<h4 id="expression-comportant-uniquement-des-valeurs-booleennes">Expression comportant uniquement des valeurs booléennes<a class="headerlink" href="#expression-comportant-uniquement-des-valeurs-booleennes" title="Permanent link">⚓︎</a></h4>
-<p>Exemple : A = <code>True and True or (not False and False)</code></p>
-<p>On commence par la parenthèse ( <code>not False</code> devient <code>True</code> puis <code>True and False</code> devient <code>False</code> : A = <code>True and True or (True and False)</code> = <code>True and True or False</code></p>
-<p>Puis <code>and</code> est prioritaire devant <code>or</code> (donc <code>True and True</code> devient <code>True</code>): A = <code>True or False</code></p>
-<p>On a enfin A = <code>True</code></p>
-<h4 id="expression-comportant-des-variables-booleennes">Expression comportant des variables booléennes<a class="headerlink" href="#expression-comportant-des-variables-booleennes" title="Permanent link">⚓︎</a></h4>
-<p>Pour évaluer l'expression, on peut établir une <strong>table de vérité</strong>. Il faut faire la table de vérité de chaque partie de l'expression en tenant compte des règles précédentes.</p>
-<p>Exemple de l'expression <code>a or not b</code> :</p>
-<table>
-<thead>
-<tr>
-<th align="center">a</th>
-<th align="center">b</th>
-<th align="center">not b</th>
-<th align="center">a or not b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="15-les-expressions-booleennes-et-python">1.5 Les expressions booléennes et python<a class="headerlink" href="#15-les-expressions-booleennes-et-python" title="Permanent link">⚓︎</a></h3>
-<h4 id="les-operateurs-booleens">Les opérateurs booléens<a class="headerlink" href="#les-operateurs-booleens" title="Permanent link">⚓︎</a></h4>
-<h5 id="remarque-1">Remarque 1 :<a class="headerlink" href="#remarque-1" title="Permanent link">⚓︎</a></h5>
-<p>Les opérateurs booléens sont <code>not</code>, <code>and</code> et <code>or</code>.</p>
-<p>Ne pas confondre avec les opérateurs de comparaison qui renvoient une valeur booléenne.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">7</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">9</span> <span class="o">!=</span> <span class="mi">8</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="kc">False</span>
-<span class="kc">True</span>
-</code></pre></div>
-<p>Dans ces deux exemples <code>==</code>, <code>&gt;</code>, <code>!=</code> sont des opérateurs de comparaison qui renvoient un booléen.</p>
-<h5 id="remarque-2">Remarque 2 :<a class="headerlink" href="#remarque-2" title="Permanent link">⚓︎</a></h5>
-<p>Python pratique l'<strong>évaluation paresseuse</strong> (short-circuit evaluation <img alt="🇬🇧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title=":gb:" />). L'évaluation paresseuse le fait que l'interpréteur Python s'arrête dès que sa décision est prise.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">20</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">20</span> <span class="o">//</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
-<span class="kc">False</span>
+<p>Une machine de 32 bits est un ordinateur manipulant des mots de 4 octets (<span class="arithmatex">\(4\times8 = 32\)</span> bits). C'est ce principe de regroupement en paquets de bits, ou mots machine, qui permet de donner un sens à tout le paquet de bits et ainsi pouvoir représenter et manipuler des données autres que des <span class="arithmatex">\(0\)</span> et des <span class="arithmatex">\(1\)</span> :</p>
+<ul>
+<li>des nombres entiers (positifs ou négatifs),</li>
+<li>des (approximations de) nombres réels,</li>
+<li>des caractères alphanumériques et des textes, des images, des sons, des vidéos ...</li>
+</ul>
+<h3 id="22-convertion-binaire-decimal">2.2 Convertion binaire -&gt; décimal<a class="headerlink" href="#22-convertion-binaire-decimal" title="Permanent link">⚓︎</a></h3>
+<div class="admonition savoir">
+<p class="admonition-title">Savoir faire</p>
+<p>Pour convertir un nombre entier, donné en base <span class="arithmatex">\(2\)</span> (binaire), vers le décimal, on procède ainsi:</p>
+<ul>
+<li>Au dessus de chaque chiffre, <strong>de droite à gauche</strong>, on écrit des puissances croissantes de <span class="arithmatex">\(2\)</span> :</li>
+</ul>
+<div class="arithmatex">\[2^4\,\,\,\,\,2^3\,\,\,\,\,2^2\,\,\,\,\,2^1\,\,\,\,\,2^0\]</div>
+<div class="arithmatex">\[1 \,\,\,\,\,\,\,\, 1 \,\,\,\,\,\,\,\, 0 \,\,\,\,\,\,\,\, 0 \,\,\,\,\,\,\,1\]</div>
+<ul>
+<li>On multiplie chaque chiffre par la puissance de <span class="arithmatex">\(2\)</span> correspondante :</li>
+</ul>
+<div class="arithmatex">\[\begin{align}
+11001 &amp;= 1\times2^4 + 1\times2^3 + 0\times2^2 + 0\times2^1 + 1\times2^0 \\
+&amp;= 1\times16 + 1\times8 + 0\times4 + 0\times2 + 1\times1 \\
+&amp;= 16 + 8 + 1 \\ 
+&amp;= 25
+\end{align}
+\]</div>
+</div>
+<p>Remarques :</p>
+<div class="admonition notation">
+<p class="admonition-title">Notation</p>
+<p>Pour lever l'ambigüité entre les notations Décimale et Binaire (par ex. pour des nombres décimaux tels que 110), on note les nombres en écriture binaire en utilisant la notation : 110<sub>2</sub>.</p>
+<p>Et en python, la notation sera <code>0b110</code>.</p>
+</div>
+<div class="admonition python">
+<p class="admonition-title">conversion binaire vers décimal en Python</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;0b11011&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">27</span>
 </code></pre></div>
-<p>Comme le premier booléen vaut <code>False</code> et que la conjonction <code>and</code> est appelée, il n'est pas nécessaire d'évaluer le deuxième booléen.</p>
-<p>Essayez de lancer dans le terminal ci-dessous : <code>False and print("Salut")</code> et comparez le à <code>True and print("Salut")</code>. Comparez ensuite avec l'opérateur <code>or</code>.</p>
-<div onclick='start_term("id0")' id="fake_id0" class="terminal_f"><label class="terminal"><span>>>> </span></label></div>
-<div id="id0" class="hide"></div>
-
-<h2 id="2-de-lexpression-booleenne-au-composant-electronique">2. De l'expression booléenne au composant électronique<a class="headerlink" href="#2-de-lexpression-booleenne-au-composant-electronique" title="Permanent link">⚓︎</a></h2>
-<h3 id="21-un-peu-dhistoire">2.1 Un peu d'histoire<a class="headerlink" href="#21-un-peu-dhistoire" title="Permanent link">⚓︎</a></h3>
-<p>Les circuits d’un ordinateur manipulent uniquement des <strong>0</strong> ou des <strong>1</strong> représentés en interne par des <strong>tensions hautes ou basses</strong>. Les premiers ordinateurs construits dans la période 1945-1950 sont basés sur une technologie de <strong>tube à vide ou tube électrique</strong>.</p>
-<p>En 1947, aux laboratoires Bell, Shockley, Bardeen et Brattain inventent le <strong>transistor</strong>, un petit composant électronique qui se comporte comme un interrupteur. Les transistors, plus petits et dissipant moins de chaleur, vont supplanter les tubes électriques. En 1954 le germanium est remplacé par le silicium, en 1955 apparaissent les premiers ordinateurs entièrement transistorisés. En 1960 le transistor à effet de champ permet l’intégration de dizaines composants dans un centimètre carré. Les transistors sont ensuite directement gravés dans une plaque de silicium constituant un <strong>cicrcuit intégré</strong>.</p>
-<p>En 1965, <strong>Gordon Moore</strong> futur directeur d’Intel énonce la loi empirique suivante : il y aura doublement de la densité d’intégration des transistors tous les deux ans. Cette loi s’est vérifiée jusqu’à présent avec une finesse de gravure d’environ 5 nanomètres en 2020. Le graphique ci-dessous représente l’évolution du nombre de transistors par circuit intégré.</p>
-<p><img alt="Image" class="center" src="../img/moore.png" /></p>
-<h2 id="22-les-portes-logiques">2.2 Les portes logiques<a class="headerlink" href="#22-les-portes-logiques" title="Permanent link">⚓︎</a></h2>
-<p>Dans un ordinateur, les opérations de calcul sont effectuées en binaire, à l'aide de <strong>portes logiques</strong>. En associant des transistors, on réalise ces portes logiques. Une porte logique est un circuit électronique représentant une fonction logique.</p>
-<p>Voici ci-dessous la représentation de quelques portes (représentation américaine et internationnale)</p>
-<p><img alt="Image" class="center" src="../img/portes_logiques.png" /></p>
-<h2 id="23-circuit-combinatoire">2.3 Circuit combinatoire<a class="headerlink" href="#23-circuit-combinatoire" title="Permanent link">⚓︎</a></h2>
-<p>Un <strong>circuit logique combinatoire</strong> permet de réaliser une ou plusieurs fonctions booléennes : ses sorties ne dépendent que de l'état actuel de ses entrées. Les portes logiques NOT, NOR, NAND, AND, OR et XOR sont des circuits combinatoires.</p>
-<div class="admonition exercice">
-<p class="admonition-title">Exemple</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Que fait ce circuit ?</label><label for="__tabbed_1_2">Aide : Simuler en ligne</label><label for="__tabbed_1_3">Solution</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Déterminer la fonction logique réaliser par ce circuit.</p>
-<p><img alt="Image" src="../img/xor.png" /></p>
 </div>
-<div class="tabbed-block">
-<p>Réaliser des circuits logiques et les tester <a href="https://dept-info.labri.fr/ENSEIGNEMENT/archi/circuits/blank-teacher.html">ici</a></p>
+<h3 id="23-convertion-decimal-binaire">2.3 Convertion décimal -&gt; binaire<a class="headerlink" href="#23-convertion-decimal-binaire" title="Permanent link">⚓︎</a></h3>
+<div class="admonition savoir">
+<p class="admonition-title">Savoir faire</p>
+<p>Pour convertir un nombre décimal (en base <span class="arithmatex">\(10\)</span>) en nombre binaire (en base <span class="arithmatex">\(2\)</span>) on procède ainsi :</p>
+<ul>
+<li>réaliser la <strong>division euclidienne</strong> du nombre décimal (en base <span class="arithmatex">\(10\)</span>) par 2, jusqu'à ce que le <strong>quotient soit égal à 0</strong>.</li>
+<li>lire alors la suite de <strong>tous les Restes mais à l'envers</strong> (en commençant du bas vers la haut)</li>
+</ul>
+<p><img alt="Image" class="center" src="../img/Dec2Bin.png" /></p>
+<p>Dans cet exemple, on peut dire que: 83<sub>10</sub> = 1010011<sub>2</sub></p>
 </div>
-<div class="tabbed-block">
-<p>On a réalisé une porte <code>xor</code>.</p>
-<p>Vous pouvez vérifier que <code>(a and not b) or (not a and b) = a xor b</code></p>
+<div class="admonition python">
+<p class="admonition-title">Conversion décimal vers binaire en Python</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="nb">bin</span><span class="p">(</span><span class="mi">1534</span><span class="p">)</span>
+<span class="s1">&#39;0b10111111110&#39;</span> 
+</code></pre></div>
 </div>
+<h2 id="3-representation-hexadecimale-des-entiers-positifs">3. Représentation hexadécimale des entiers positifs<a class="headerlink" href="#3-representation-hexadecimale-des-entiers-positifs" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-les-chiffres-de-la-base-hexadecimale">3.1 Les chiffres de la base hexadécimale<a class="headerlink" href="#31-les-chiffres-de-la-base-hexadecimale" title="Permanent link">⚓︎</a></h3>
+<p>L'inconvénient essentiel du système binaire est la longueur de l'écriture des nombres qu'il génère. Pour cette raison, le <strong>système hexadécimal</strong>, ou système de <strong>base 16</strong> est très souvent employé.</p>
+<ul>
+<li>Pour écrire en base 2, il faut 2 chiffres différents : le 0 et le 1.</li>
+<li>Pour écrire en base 10, il faut 10 chiffres différents: 0,1,2,3,4,5,6,7,8,9.</li>
+<li>Pour écrire en base 16, il faut donc 16 chiffres différents : <strong>0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F</strong>.</li>
+</ul>
+<p>On a donc la correspondance :</p>
+<ul>
+<li>A représente 10</li>
+<li>B représente 11 </li>
+<li>C représente 12 </li>
+<li>D représente 13 </li>
+<li>E représente 14 </li>
+<li>F représente 15 </li>
+</ul>
+<h3 id="32-convertion-hexadecimal-decimal">3.2 Convertion hexadécimal -&gt; décimal<a class="headerlink" href="#32-convertion-hexadecimal-decimal" title="Permanent link">⚓︎</a></h3>
+<div class="admonition savoir">
+<p class="admonition-title">Savoir faire</p>
+<p>Pour faire la conversion, on procède comme pour passer du binaire au décimal mais on utilise les <strong>puissances de 16</strong>.</p>
+<p><span class="arithmatex">\(4A5E = 4\times16^3+10\times16^2+5\times16^1+14\times16^0=19038_{10}\)</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">Hexadécimal</th>
+<th align="center"><span class="arithmatex">\(4\)</span></th>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(5\)</span></th>
+<th align="center"><span class="arithmatex">\(E\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Exposant</td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center">Puissance de <span class="arithmatex">\(16\)</span></td>
+<td align="center"><span class="arithmatex">\(16^3\)</span></td>
+<td align="center"><span class="arithmatex">\(16^2\)</span></td>
+<td align="center"><span class="arithmatex">\(16^1\)</span></td>
+<td align="center"><span class="arithmatex">\(16^0\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>Remarques :</p>
+<div class="admonition notation">
+<p class="admonition-title">Notation</p>
+<p>On note les nombres en écriture hexadécimale : 4A5E<sub>16</sub>.</p>
+<p>Et en python, la notation sera <code>0x4a5e</code>.</p>
 </div>
+<div class="admonition python">
+<p class="admonition-title">Conversion hexadécimal vers décimal en Python</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;0x4a5e&#39;</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span>
+<span class="mi">19038</span>
+</code></pre></div>
 </div>
-<p>Il existe d'autres circuits, dits <strong>séquentiels</strong>, dont les sorties se calculent non seulement à partir de leurs valeurs d’entrée actuelles mais aussi à partir de leurs états précédents : le facteur temps intervient. Ils utilisent des circuits de mémoire pour mémoriser leurs états antérieurs.</p>
+<h3 id="33-convertion-decimal-hexadecimal">3.3 Convertion décimal -&gt; hexadécimal<a class="headerlink" href="#33-convertion-decimal-hexadecimal" title="Permanent link">⚓︎</a></h3>
+<div class="admonition savoir">
+<p class="admonition-title">Savoir faire</p>
+<p>Pour convertir un nombre décimal en nombre hexadécimal on procède de la même façcon que pour le binaire :</p>
+<ul>
+<li>réaliser la <strong>division euclidienne</strong> du nombre décimal par 16, jusqu'à ce que le <strong>quotient soit égal à 0</strong>.</li>
+<li>lire alors la suite de <strong>tous les Restes mais à l'envers</strong> (en commençant du bas vers la haut)</li>
+</ul>
+<p><img alt="Image" class="center" src="../img/Dec2Hex.png" /></p>
+<p>Dans cet exemple, on peut dire que: 2526<sub>10</sub> = 9DE<sub>16</sub></p>
+</div>
+<div class="admonition python">
+<p class="admonition-title">Conversion décimal vers hexadécimal en Python</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="nb">hex</span><span class="p">(</span><span class="mi">1534</span><span class="p">)</span>
+<span class="s1">&#39;0x5fe&#39;</span>
+</code></pre></div>
+</div>
+<h3 id="34-ecriture-des-octets">3.4 Écriture des octets<a class="headerlink" href="#34-ecriture-des-octets" title="Permanent link">⚓︎</a></h3>
+<p>Un <strong>octet</strong> (mot de 8 bits) peut représente des <strong>valeurs comprises entre 0 et 255<sub>10</sub></strong>.</p>
+<ul>
+<li><strong>0</strong> pour <strong>0000 0000</strong> en binaire ou <strong>00</strong> en hexadécimal.</li>
+<li><strong>255</strong> pour <strong>1111 1111</strong> en binaire ou <strong>FF</strong> en hexadécimal.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Méthode pour passer du binaire à l'hexadécimal</p>
+<p>Tableau de correspondance des chiffres en hexadécimal</p>
+<table>
+<thead>
+<tr>
+<th>hexa</th>
+<th>bin (sur 4 bits)</th>
+<th>dec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>3</td>
+</tr>
+<tr>
+<td>-</td>
+<td>----</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+<td>9</td>
+</tr>
+<tr>
+<td>A</td>
+<td>1010</td>
+<td>10</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1011</td>
+<td>11</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1100</td>
+<td>12</td>
+</tr>
+<tr>
+<td>D</td>
+<td>1101</td>
+<td>13</td>
+</tr>
+<tr>
+<td>E</td>
+<td>1110</td>
+<td>14</td>
+</tr>
+<tr>
+<td>F</td>
+<td>1111</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Pour convertir un octet représenté en binaire en hexadécimal, il faut séparer l'écriture de l'octet en deux "paquets" de 4 bits et faire la correspondance avec les chiffres du tableau.</p>
+<p>Exemple : <strong><code>0100 1010</code></strong> représente l'octet <strong><code>4A</code></strong> en hexadécimal.</p>
+<p>Faire le contraire pour passer de la représentation en hexadécimal à la représentation bianire.</p>
+<p>Exemple : <strong><code>E5</code></strong> représente l'octet <strong><code>1110 0101</code></strong> en binaire.</p>
+</div>
+<h2 id="4-generalisation-pour-une-base-b-quelconque">4. Généralisation pour une base b quelconque<a class="headerlink" href="#4-generalisation-pour-une-base-b-quelconque" title="Permanent link">⚓︎</a></h2>
+<p>On généralise le Système de Numération Décimale positionnelle, en un <strong>Système de Numération positionnel de base b</strong>.</p>
+<p>Il faut déjà commencer par <strong>choisir des notations</strong> pour un ensemble de *<em>b chiffres</em> :</p>
+<ul>
+<li>Si <span class="arithmatex">\(b\le 10\)</span>, alors les chiffres sont un sous-ensemble de {0,1,2,3,4,5,6,7,8,9};</li>
+<li>Si <span class="arithmatex">\(b\gt 10\)</span>, alors les chiffres simples ne suffisent plus, il en faut de nouveaux. On choisit les chiffres dans l'ensemble {0,1,2,3,4,5,6,7,8,9,A,B,C,..,X,Y,Z}.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Notation d'un nombre x en base b</p>
+<p>x<sub>b</sub> désignent le nombre x écrit en base b.</p>
+</div>
+<h3 id="41-ecriture-de-nombres-en-base-b">4.1 Écriture de Nombres en Base b<a class="headerlink" href="#41-ecriture-de-nombres-en-base-b" title="Permanent link">⚓︎</a></h3>
+<p>Pour lire, on procède comme pour les autres bases mais on utilise les <strong>puissances de b</strong>.</p>
+<p>Exemple d'un nombre entier positif écrit en base 4 :</p>
+<p><span class="arithmatex">\(312 = 3\times4^2+1\times4^1+2\times4^0=54_{10}\)</span></p>
+<div class="highlight"><pre><span></span><code>| Base 4 | $3$ | $1$ | $2$ |
+| :-: | :-: | :-: | :-: |
+| Exposant | $2$ | $1$ | $0$ |
+| Puissance de $4$ | $4^2$ | $4^1$ | $4^0$ |
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">zéro en base b</p>
+<p>Le chiffre zéro s'écrit 0 dans toutes les bases</p>
+</div>
+<h2 id="42-conversion-de-bases">4.2 Conversion de bases<a class="headerlink" href="#42-conversion-de-bases" title="Permanent link">⚓︎</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Conversion de base <span class="arithmatex">\(a\)</span> <span class="arithmatex">\(\Leftrightarrow\)</span> base <span class="arithmatex">\(b\)</span></p>
+<p>Pour convertir un nombre <span class="arithmatex">\(x_a\)</span> d'une base <span class="arithmatex">\(a\)</span> vers une base <span class="arithmatex">\(b\)</span> (et/ou réciproquement), il suffit (par exemple) de passer par le décimal (base <span class="arithmatex">\(10\)</span>):</p>
+<p><center><enc>Base <span class="arithmatex">\(a \Leftrightarrow\)</span> Base <span class="arithmatex">\(10 \Leftrightarrow\)</span> Base <span class="arithmatex">\(b\)</span></enc></center></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Conversion Base <span class="arithmatex">\(8\)</span> <span class="arithmatex">\(\rightarrow\)</span> Base <span class="arithmatex">\(2\)</span></p>
+<p>Soit <span class="arithmatex">\(x = 1261_8\)</span> un nombre en base <span class="arithmatex">\(8\)</span>.
+Comment écrire <span class="arithmatex">\(x\)</span> en base <span class="arithmatex">\(2\)</span> ?</p>
+<details class="corr">
+<summary>Corr</summary>
+<ul>
+<li>
+<p>Conversion de <span class="arithmatex">\(x\)</span> en Base <span class="arithmatex">\(10\)</span></p>
+<p><span class="arithmatex">\(\begin{align}
+x &amp;= (1\times 8^3+2\times 8^2+6\times 8^1+1\times 8^0)_{10} \\
+&amp;= (512 + 128 + 48 + 1)_{10} \\
+&amp;= 689_{10}
+\end{align}\)</span></p>
+</li>
+<li>
+<p>Conversion Base <span class="arithmatex">\(10\)</span> <span class="arithmatex">\(\rightarrow\)</span> Base <span class="arithmatex">\(2\)</span>:<br />
+On réalise une succession de divisions euclidiennes par <span class="arithmatex">\(2\)</span>, on conservant à chaque fois les restes :</p>
+<p><span class="arithmatex">\(689\)</span>
+<span class="arithmatex">\(344\)</span> <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(1\)</span> 
+<span class="arithmatex">\(172\)</span> <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(0\)</span> 
+<span class="arithmatex">\(86\)</span>  <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(0\)</span> 
+<span class="arithmatex">\(43\)</span>  <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(0\)</span> 
+<span class="arithmatex">\(21\)</span>  <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(1\)</span> 
+<span class="arithmatex">\(10\)</span>  <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(1\)</span> 
+<span class="arithmatex">\(5\)</span>   <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(0\)</span> 
+<span class="arithmatex">\(2\)</span>   <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(1\)</span> 
+<span class="arithmatex">\(1\)</span>   <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(0\)</span> 
+<span class="arithmatex">\(0\)</span>   <span class="arithmatex">\(\rightarrow\)</span> reste <span class="arithmatex">\(1\)</span> 
+Conclusion : <span class="arithmatex">\(689_{10} = 1010110001_2\)</span></p>
+</li>
+<li>
+<p>Conclusion : <enc><span class="arithmatex">\(1261_8 = 1010110001_2\)</span></enc></p>
+</li>
+</ul>
+</details>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Conversion Directe Base <span class="arithmatex">\(a\)</span> <span class="arithmatex">\(\Rightarrow\)</span> Base <span class="arithmatex">\(b\)</span></p>
+<p>On peut aussi convertir directement un nombre <span class="arithmatex">\(x\)</span> en base <span class="arithmatex">\(a\)</span> (<span class="arithmatex">\(x_a\)</span>), vers une base <span class="arithmatex">\(b\)</span>, en :</p>
+<ul>
+<li>réalisant une succession de divisions de <span class="arithmatex">\(x_a\)</span> par <span class="arithmatex">\(b\)</span>, jusqu'à ce que le quotient soit égal à <span class="arithmatex">\(0\)</span></li>
+<li>en conservant les restes <span class="arithmatex">\(r\)</span> pour chaque division (<span class="arithmatex">\(0\le r \lt b\)</span>)</li>
+<li>Le nombre <span class="arithmatex">\(x_b\)</span> (<span class="arithmatex">\(x\)</span> en base <span class="arithmatex">\(b\)</span>) est alors obtenu en lisant les restes à l'envers (du dernier vers le premier)</li>
+</ul>
+</div>
 
               
 <script src="../../../js/ide.js"></script> 
@@ -1496,7 +1556,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
       
         
-        <a href="../../sommaire/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Sommaire" rel="prev">
+        <a href="../../Booleens/cours/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Opérateurs booléens" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1505,20 +1565,20 @@
               <span class="md-footer__direction">
                 Précédent
               </span>
-              Sommaire
+              Opérateurs booléens
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../Bases/cours/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Bases" rel="next">
+        <a href="../../../Types%20construits/sommaire/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Sommaire" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Bases
+              Sommaire
             </div>
           </div>
           <div class="md-footer__button md-icon">
