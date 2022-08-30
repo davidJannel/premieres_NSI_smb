@@ -453,9 +453,101 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Parcours séquentiel d'un tableau
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Parcours séquentiel d'un tableau
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-rappel-sur-la-facon-de-parcourir-les-elements-dun-tableau" class="md-nav__link">
+    1. Rappel sur la façon de parcourir les éléments d'un tableau
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Rappel sur la façon de parcourir les éléments d'un tableau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-parcours-par-elements" class="md-nav__link">
+    1.1 Parcours par éléments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-parcours-par-indice" class="md-nav__link">
+    1.2 Parcours par indice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recherche-dune-occurrence" class="md-nav__link">
+    2. Recherche d'une occurrence
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Recherche d'une occurrence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-compter-le-nombre-doccurrences-dun-element-dans-un-tableau" class="md-nav__link">
+    2.1 Compter le nombre d'occurrences d'un élément dans un tableau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-connaitre-dindice-de-loccurence-dun-element-dans-un-tableau" class="md-nav__link">
+    2.2 Connaître d'indice de l'occurence d'un élément dans un tableau
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-recherche-dun-extremum-dans-un-tableau" class="md-nav__link">
+    3. Recherche d'un extremum dans un tableau
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-calcul-de-moyenne" class="md-nav__link">
+    4. Calcul de moyenne
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1066,10 +1158,127 @@
 
 
 <h1 id="ch8-parcours-sequentiel-dun-tableau">CH8 : Parcours séquentiel d'un tableau<a class="headerlink" href="#ch8-parcours-sequentiel-dun-tableau" title="Permanent link">⚓︎</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Programme officiel"</p>
+<details class="note">
+<summary>Programme officiel"</summary>
 <p><img alt="Image" src="../img/bo.png" /></p>
+</details>
+<p>Les algorithmes du chapitre sont à travailler et à apprendre. Ils sont souvent utilisés comme "briques" de base pour des algorithmes plus compliqués. Ils sont de plus au programme de l'épreuve pratique du Bac (exercice 1).</p>
+<h2 id="1-rappel-sur-la-facon-de-parcourir-les-elements-dun-tableau">1. Rappel sur la façon de parcourir les éléments d'un tableau<a class="headerlink" href="#1-rappel-sur-la-facon-de-parcourir-les-elements-dun-tableau" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-parcours-par-elements">1.1 Parcours par éléments<a class="headerlink" href="#11-parcours-par-elements" title="Permanent link">⚓︎</a></h3>
+<div class="admonition python">
+<p class="admonition-title">Savoir faire</p>
+<p>On utilise une boucle <code>for</code> en itérant sur les éléments en utilisant le mot clé <code>in</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">noms</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;toto&#39;</span><span class="p">,</span> <span class="s1">&#39;tata&#39;</span><span class="p">,</span> <span class="s1">&#39;titi&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">noms</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">elt</span><span class="p">)</span>
+<span class="n">toto</span>
+<span class="n">tata</span>
+<span class="n">titi</span>
+</code></pre></div>
 </div>
+<h3 id="12-parcours-par-indice">1.2 Parcours par indice<a class="headerlink" href="#12-parcours-par-indice" title="Permanent link">⚓︎</a></h3>
+<div class="admonition python">
+<p class="admonition-title">Savoir faire</p>
+<p>On utilise toujours une boucle <code>for</code>, mais on itére sur les indices en créant un itérable à l'aide de la fonction <code>range</code>. Pour un tableau de longueur <code>n</code>, <code>range(len(tableau))</code> renvoie un itérable allant de <code>0</code> à <code>n-1</code> par pas de <code>1</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">noms</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;toto&#39;</span><span class="p">,</span> <span class="s1">&#39;tata&#39;</span><span class="p">,</span> <span class="s1">&#39;titi&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">noms</span><span class="p">)):</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">toto</span>
+<span class="n">tata</span>
+<span class="n">titi</span>
+</code></pre></div>
+</div>
+<h2 id="2-recherche-dune-occurrence">2. Recherche d'une occurrence<a class="headerlink" href="#2-recherche-dune-occurrence" title="Permanent link">⚓︎</a></h2>
+<p>Le terme <strong>occurrence</strong> signififie <strong>présence</strong>. Par exemple, il y a 2 occurrences de la lettre <code>a</code> dans le tableau <code>['a', 'v', 'a', 'n', 'c', 'e']</code>.</p>
+<h3 id="21-compter-le-nombre-doccurrences-dun-element-dans-un-tableau">2.1 Compter le nombre d'occurrences d'un élément dans un tableau<a class="headerlink" href="#21-compter-le-nombre-doccurrences-dun-element-dans-un-tableau" title="Permanent link">⚓︎</a></h3>
+<div class="admonition savoir">
+<p class="admonition-title">À connaître</p>
+<p>La fonction <code>nb_occurrence</code> prend en paramètres un élément <code>valeur</code> et un tableau <code>tab</code> non vide. Elle renvoie le nombre entier <code>compteur</code> correspondant au nombre d'occurrences de <code>valeur</code> dans <code>tab</code>. Si <code>valeur</code> n'est pas présent, la fonction renvoie <code>0</code>.</p>
+<p>On utilise une boucle <strong><code>for</code></strong> pour parcourir l'ensemble du tableau :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nb_occurrence</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+	<span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">elt</span> <span class="o">==</span> <span class="n">valeur</span><span class="p">:</span>
+			<span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+	<span class="k">return</span> <span class="n">compteur</span>
+</code></pre></div>
+</div>
+<p>Tests de la fonction :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_occurrence</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nb_occurrence</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="mi">0</span>
+</code></pre></div>
+<p><strong>Remarque :</strong></p>
+<p>La méthode <code>count</code> fait le boulot : <code>ma_liste.count(valeur)</code> renvoie également le nombre d'occurrences de <code>valeur</code> dans <code>ma_liste</code>. Mais dans le cours, on n'utilisera pas ces méthodes "built-in" pour construire les fonctions demandées. Nous on s'intéresse à l'algorithme pas au résultat (même si celui-ci est important).</p>
+<h3 id="22-connaitre-dindice-de-loccurence-dun-element-dans-un-tableau">2.2 Connaître d'indice de l'occurence d'un élément dans un tableau<a class="headerlink" href="#22-connaitre-dindice-de-loccurence-dun-element-dans-un-tableau" title="Permanent link">⚓︎</a></h3>
+<div class="admonition savoir">
+<p class="admonition-title">À connaître</p>
+<p>La fonction <code>index_occurrence</code> prend en paramètres un élément <code>valeur</code> et un tableau <code>tab</code> non vide. Elle renvoie l'indice <code>i_occ</code> de la première occurrence de <code>valeur</code> dans <code>tab</code>. Si <code>valeur</code> n'est pas présent, la fonction renvoie <code>None</code>.</p>
+<p>On va ici utilisé un boucle <strong><code>while</code></strong>. Cela permet de ne pas parcourir l'ensemble du tableau si <code>valeur</code> est présent dans <code>tab</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">index_occurrence</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+	<span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+	<span class="n">i_occ</span> <span class="o">=</span> <span class="kc">None</span>
+	<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">while</span> <span class="n">trouve</span> <span class="o">==</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">valeur</span><span class="p">:</span>
+			<span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>
+			<span class="n">i_occ</span> <span class="o">=</span> <span class="n">i</span>
+		<span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+	<span class="k">return</span> <span class="n">i_occ</span>
+</code></pre></div>
+</div>
+<p>Tests de la fonction :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">index_occurrence</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">nb_occurrence</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+<span class="kc">None</span>
+</code></pre></div>
+<h2 id="3-recherche-dun-extremum-dans-un-tableau">3. Recherche d'un extremum dans un tableau<a class="headerlink" href="#3-recherche-dun-extremum-dans-un-tableau" title="Permanent link">⚓︎</a></h2>
+<div class="admonition savoir">
+<p class="admonition-title">À connaître</p>
+<p>La recherche d'un <strong>maximum</strong> ou d'un <strong>minimum</strong> se fait avec une boucle <strong><code>for</code></strong> afin de parcourir la totalité du tableau.</p>
+<p>La fonction <code>recherche_max</code> prend en paramètre un tableau, non vide, <code>tab</code> de nombres entiers et renvoie la plus grande valeur <code>valeur_max</code> du tableau.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+	<span class="n">valeur_max</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">elt</span> <span class="o">&gt;</span> <span class="n">valeur_max</span><span class="p">:</span>
+			<span class="n">valeur_max</span> <span class="o">=</span> <span class="n">elt</span>
+	<span class="k">return</span> <span class="n">valeur_max</span>
+</code></pre></div>
+<details class="python">
+<summary>Recherche du minimum</summary>
+<p>La fonction <code>recherche_min</code> prend en paramètre un tableau, non vide, <code>tab</code> de nombres entiers et renvoie la plus petite valeur <code>valeur_min</code> du tableau.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_min</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+	<span class="n">valeur_min</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">elt</span> <span class="o">&lt;</span> <span class="n">valeur_min</span><span class="p">:</span>
+			<span class="n">valeur_min</span> <span class="o">=</span> <span class="n">elt</span>
+	<span class="k">return</span> <span class="n">valeur_min</span>
+</code></pre></div>
+</details>
+</div>
+<p>Tests des fonctions :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_max</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_min</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="o">-</span><span class="mi">6</span>
+</code></pre></div>
+<h2 id="4-calcul-de-moyenne">4. Calcul de moyenne<a class="headerlink" href="#4-calcul-de-moyenne" title="Permanent link">⚓︎</a></h2>
+<div class="admonition savoir">
+<p class="admonition-title">À connaître</p>
+<p>La fonction <code>moyenne</code> prend en paramètre un tableau d'entiers <code>tab</code>, non vide, et renvoie la moyenne arithmétique des valeurs présentes dans le tableau.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+	<span class="n">somme_valeur</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+		<span class="n">somme_valeur</span> <span class="o">=</span> <span class="n">somme_valeur</span> <span class="o">+</span> <span class="n">elt</span>
+	<span class="k">return</span> <span class="n">somme_valeur</span> <span class="o">//</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Test de la fonction :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+<span class="mi">12</span>
+</code></pre></div>
 
               
 <script src="../../../js/ide.js"></script> 
