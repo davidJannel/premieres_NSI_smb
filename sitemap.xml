@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Programmation/map/cours/</loc>
+         <lastmod>2022-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20bases/sommaire/</loc>
          <lastmod>2022-08-30</lastmod>
          <changefreq>daily</changefreq>
@@ -72,6 +77,11 @@
     </url>
     <url>
          <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20construits/sommaire/</loc>
+         <lastmod>2022-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://davidjannel.github.io/premieres_NSI_smb/Types%20construits/dictionnaires/cours/</loc>
          <lastmod>2022-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
